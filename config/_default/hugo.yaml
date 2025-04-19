@@ -1,0 +1,34 @@
+baseURL: "https://palo.sk/"
+languageCode: "sk"
+title: "Dominik Paľo"
+theme: hugo-profile
+
+caches:
+  images:
+    dir: :cacheDir/images
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+#services:
+  #googleAnalytics:
+    #id: G-MEASUREMENT_ID
+  #disqus:
+    #shortname: your-disqus-shortname
+
+pagination:
+  pagerSize: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+      

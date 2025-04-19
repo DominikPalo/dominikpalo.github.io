@@ -1,0 +1,309 @@
+title: "Dominik Paľo"
+description: "Osobná stránka a blog"
+# staticPath: ""  # The path to serve the static files from
+favicon: "/images/favicon.ico"
+
+# Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+# serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+# Note the lack of "" in true, it should be of boolean type.
+useBootstrapCDN: false
+
+# If you want to load dynamically responsive images from Cloudinary
+# This requires your images to be uploaded + hosted on Cloudinary
+# Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+# cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+# Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+mathjax: false
+
+# Whether the fade animations on the home page will be enabled
+animate: true
+
+theme:
+  disableThemeToggle: true
+  defaultTheme: "light" # dark
+
+font:
+  fontSize: 1rem # default: 1rem
+  fontWeight: 400 # default: 400
+  lineHeight: 1.5 # default: 1.5
+  textAlign: left # default: left
+
+# color preference
+# When using hex codes for colors, quotations must be used along with the # sign
+# color:
+#   textColor: "#343a40"
+#   secondaryTextColor: "#6c757d"
+#   textLinkColor: "#007bff"
+#   backgroundColor: "#eaedf0"
+#   secondaryBackgroundColor: "#64ffda1a"
+#   primaryColor: "#007bff"
+#   secondaryColor: "#f8f9fa"
+
+#   darkmode:
+#     textColor: "#e4e6eb"
+#     secondaryTextColor: "#b0b3b8"
+#     textLinkColor: "#ffffff"
+#     backgroundColor: "#18191a"
+#     secondaryBackgroundColor: "#212529"
+#     primaryColor: "#ffffff"
+#     secondaryColor: "#212529"
+
+# If you want to customize the menu, you can change it here
+navbar:
+  align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+  # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+  # showBrandLogo: false # Show brand logo in nav bar | default is true
+  brandName: "Dominik Paľo" # Brand name for the brand | default is the title variable
+  disableSearch: true
+  # searchPlaceholder: "Search"
+  stickyNavBar:
+    enable: true
+    showOnScrollUp: true
+  enableSeparator: false
+  menus:
+    disableAbout: false
+    disableExperience: false
+    disableEducation: false
+    disableProjects: false
+    disableAchievements: false
+    disableContact: false
+
+# Hero
+hero:
+  enable: true
+  intro: "Ahoj, volám sa"
+  title: "Dominik"
+  subtitle: "a rád tvorím"
+  content: "#### Softvérový inžinier, vo voľnom čase venujúci sa hardvéru, elektronike a 3D tlači. Tzv. [_maker_](https://en.wikipedia.org/wiki/Maker_culture)"
+  image: /images/me.jpg
+  bottomImage:
+    enable: true
+  # roundImage: true # Make hero image circular | default false
+  button:
+    enable: false
+    name: "Resume"
+    url: "#"
+    download: true
+    newPage: false
+  socialLinks:
+    fontAwesomeIcons:
+      - icon: fab fa-github
+        url: https://github.com/DominikPalo/
+      - icon: fab fa-linkedin
+        url: https://www.linkedin.com/in/dpalo
+      - icon: fab fa-instagram
+        url: https://www.instagram.com/dominik.palo
+    # customIcons:
+    #   - icon: /fav.png
+    #     url: "https://example.com"
+
+# About
+about:
+  enable: true
+  title: "O mne"
+  # image: "/images/chip.png"
+  content: |-
+    TODO A my
+  skills:
+    enable: true
+    title: "Tu je niekoľko technológií, s ktorými som v poslednej dobe pracoval:"
+    items:
+      - "Swift"
+      - "C#"
+      - "C/C++"
+      - "TypeScript"
+
+# Experience
+experience:
+  enable: true
+  title: "Skúsenosti"
+  subtitle: "pracovné, ale aj školské"
+  items:
+    - job: "👨‍💻 Senior Software Engineer"
+      company: "Slido (Cisco)"
+      companyUrl: "https://slido.com"
+      date: "2014 – súčasnosť"
+      info:
+        enable: false
+      content: |
+        Aktuálne pôsobím ako softvérový inžinier v spoločnosti [Slido](https://slido.com) (od roku 2021 súčasť [Cisco](https://cisco.com)), kde sa zameriavam na vývoj natívnych aplikácií a integrácií pre operačné systémy macOS (Swift) a Windows (C#). Pri svojej práci však využívam aj webové technológie (najmä jazyk TypeScript a frameworky React a Node.js).
+
+    - job: "👨‍💻 Software & Hardware Engineer"
+      company: "Matsuko"
+      companyUrl: "https://matsuko.com"
+      date: "2012 – 2016"
+      info:
+        enable: false
+      content: |-
+        Počas môjho pôsobenia som sa podieľal na viacerých softvérových aj hardvérových projektoch pre rôznych klientov. 
+
+        V oblasti softvéru som vyvíjal multiplatformové mobilné aplikácie pre Android, iOS a Windows Phone, pričom som využíval framework [Xamarin](https://dotnet.microsoft.com/en-us/apps/xamarin) a programovací jazyk C#.
+
+        Čo sa týka hardvéru, venoval som sa návrhu zariadení na mieru, najmä pre rôzne dočasné inštalácie a exhibície. Mal som na starosti návrh plošných spojov v prostredí [EAGLE](https://en.wikipedia.org/wiki/EAGLE_(program)), programovanie mikrokontrolérov (Atmel AVR) a následnú integráciu hardvéru so softvérom.
+
+    - job: "👨‍🎓 Študent"
+      company: "FEI STU"
+      companyUrl: "https://www.fei.stuba.sk"
+      date: "2008 – 2013"
+      info:
+        enable: false
+      content: |-
+        Bakalárske a inžinierske štúdium som úspešne absolvoval na Fakulte elektrotechniky a informatiky Slovenskej technickej univerzity v Bratislave, v odbore [aplikovaná informatika](https://www.fei.stuba.sk/sk/chcem-studovat-na-feike/studijne-programy/aplikovana-informatika.html?page_id=6278) so špecializáciou na modelovanie a simuláciu udalostných systémov.
+
+        Počas štúdia som bol akívnym členom združenia [Ynet](https://www.ynet.sk/sk/), kde som pomáhal so správou internetovej siete a sieťového laboratória na internátoch [ŠD Mladosť](https://ubytovanieastravovanie.stuba.sk/sd-mladost) v Mlynskej doline.
+
+# Education
+education:
+  enable: false
+  title: "Vzdelanie"
+  index: false
+  items:
+    - title: 'Inžinier v odbore "Aplikovaná informatika"'
+      school:
+        name: "Slovenská technická univerzita v Bratislave"
+        url: "https://www.stuba.sk/"
+      date: "2011 – 2013"
+    - title: 'Bakalár v odbore "Aplikovaná informatika"'
+      school:
+        name: "Slovenská technická univerzita v Bratislave"
+        url: "https://www.stuba.sk/"
+      date: "2008 – 2011"
+
+# Achievements
+achievements:
+  enable: false
+  # title: "Custom Name"
+  items:
+    - title: Google kickstart runner
+      content: I solved all problems with optimal solution.
+      url: https://example.com
+      image: /images/achievement.jpg
+
+# Projects
+projects:
+  enable: true
+  title: "Portfólio"
+  subtitle: "projekty, na ktorých som sa podieľal alebo sa stále podieľam"
+  items:
+    - title: Slido for PowerPoint
+      content: |
+        Integrácia, ktorá umožňuje vkladať ankety, kvízy, prieskumy alebo Q&A priamo do PowerPoint prezentácií a automaticky ich spúšťať počas prezentovania.
+
+        Toto je projekt, ktorému aktuálne venujem 90% môjho pracovného času. Primárne mám na starosti vývoj integrácie pre operačný systém macOS, kde využívam jazyky Swift, C, C++ a dokonca aj [VBA](https://sk.wikipedia.org/wiki/Visual_Basic_for_Applications). Pomáham ale aj pri vývoji integrácie pre Windows (.NET/C#) a jej frontendu (React/TypeScript).
+      image: /images/projects/slido-ppi.jpg
+      featured:
+        name: 🚀 Vyskúšať
+        link: https://www.slido.com/powerpoint
+      badges:
+        - "Swift"
+        - "C#"
+        - "C/C++"
+        - "TypeScript"
+        - "React"
+    - title: Slido for Google Slides
+      content: |-
+        Integrácia, ktorá umožňuje vkladať ankety, kvízy, prieskumy alebo Q&A priamo do Google Slides prezentácií a automaticky ich spúšťať počas prezentovania. Pozostáva z viacerých prepojených komponentov ([rozšírenie pre Google Chrome](https://chromewebstore.google.com/detail/slido/dhhclfjehmpacimcdknijodpjpmppkii?pli=1), [doplnok pre Google Slides](https://workspace.google.com/marketplace/app/slido_for_google_slides/240609050747), vlastný webový prehrávač a tzv. Slido Sidebar).
+
+        V počiatočných fázach projektu som sa podielaľ na vývoji rozšírenia pre prehliadač Google Chrome a tiež doplnku pre Google Slides. Neskôr vznikol okolo integrácie samostatný tím, ktorý prácu kompletne prevzal.
+      image: /images/projects/slido-gsi.jpg
+      featured:
+        name: 🚀 Vyskúšať
+        link: https://www.slido.com/google-slides
+      badges:
+        - "TypeScript"
+        - "React"
+        - "Google Cloud"
+    - title: Slido Switcher (2017 – 2025)
+      content: |-
+        8 rokov som mal na starosti vývoj natívnych aplikácií pre operačné systémy Windows a macOS, ktoré slúžili na vzdialené ovládanie počítača priamo z administrátorského rozhrania Slido. To umožňovalo počas prezentácie plynulo prechádzať medzi Slido interakciami a prezentovaným obsahom.
+
+        Aplikácie boli postupne [nahradené](https://community.slido.com/news-announcements-3/slido-s-switcher-app-was-sunsetted-in-january-2025-4416) samostatnými integráciami [Slido for PowerPoint](https://www.slido.com/powerpoint) a [Slido for Google Slides](https://www.slido.com/google-slides), ktoré umožňujú ešte hlbšiu integráciu a širšie možnosti automatizácie.
+      image: /images/projects/slido-switcher.png
+      badges:
+        - "Swift"
+        - "C#"
+        - "WPF"
+    - title: Slido for Slack (2018 – 2020)
+      content: |-
+        Integrácia Slida so Slackom umožňovala vytvárať a spravovať Slido eventy, ako aj klásť otázky priamo v prostredí Slacku. Aj keď mala pomerne úspešnú [kampaň na ProductHunt-e](https://www.producthunt.com/p/slido/slido-for-slack), počas svojho „života“ si nenašla dostatok používateľov, a preto bol jej vývoj po dvoch rokoch [ukončený](https://community.slido.com/news-announcements-3/sunsetting-slido-s-slack-integration-here-s-why-and-what-s-next-619).
+
+        Pri tejto integrácii som implementoval backend (Node.js/TypeScript), databázu (MySQL) a tiež logiku interakcií so [Slack API](https://api.slack.com/).
+      image: /images/projects/slido-slack.png
+      badges:
+        - "TypeScript"
+        - "NodeJS"
+        - "MySQL"
+        - "hapi.js"
+        - "Slack API"
+    - title: "Mobilná aplikácia na ovládanie zariadení pripojených k platforme Arduino (diplomová práca)"
+      content: |-
+        Vyberám z abstraktu: „Práca sa zaoberá návrhom a implementáciou systému umožnujucého pomocou mobilnej aplikácie ovládať zariadenia a monitorovať rôzne veličiny v domácnosti. Okrem možnosti manuálneho ovládania, systém podporuje aj základnú automatizáciu domácnosti na princípe používateľom definovaných pravidiel.“
+
+        V dnešnej dobe IoT sú podobné aplikácie a platformy samozrejmosťou, no v roku 2013 to bola pomerne novinka, za ktorú som získal aj ocenenie dekana.
+      image: /images/projects/diplomova-praca.png
+      badges:
+        - "Arduino"
+        - "Apache Cordova"
+        - "JavaScript"
+        - "HTML/CSS"
+        - "Node.js"
+        - "CouchDB"
+
+# Contact
+contact:
+  enable: false
+  title: "Kontakt"
+  content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+  btnName: Mail me
+  btnLink: mailto:dominik@palo.sk
+  # formspree:
+  #   enable: true # `contact.email` value will be ignored
+  #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+  #   emailCaption: "Enter your email address"
+  #   messageCaption: "Enter your message here"
+  #   messageRows: 5
+
+footer:
+  recentPosts:
+    path: "blogs"
+    count: 3
+    title: Najnovšie príspevky
+    enable: false
+    disableFeaturedImage: false
+  # socialNetworks:
+  #   github: https://github.com
+  #   linkedin: https://linkedin.com
+  #   twitter: https://twitter.com
+  #   instagram: https://instagram.com
+  #   facebook: https://facebook.com
+
+# List pages like blogs and posts
+listPages:
+  disableFeaturedImage: false
+
+# Single pages like blog and post
+singlePages:
+  socialShare: true
+  readTime:
+    enable: true
+    content: "min. čítania"
+  scrollprogress:
+    enable: true
+  tags:
+    openInNewTab: true
+
+# For translations
+terms:
+  read: "Čítať"
+  toc: "Obsah"
+  copyright: "Všetky práva vyhradené"
+  pageNotFound: "Stránka nebola nájdená"
+  emailText: "Check out this site"
+
+datesFormat:
+  article: "Jan 2, 2006"
+  articleList: "Jan 2, 2006"
+  articleRecent: "Jan 2, 2006"
+#customScripts: -| # You can add custom scripts which will be added before </body> tag
+#  <script type="text/javascript"><!-- any script here --></script>
