@@ -1,0 +1,8 @@
+baseURL = 'https://palo.sk/'
+languageCode = 'sk'
+title = 'Dominik Paľo'
+theme = 'ananke'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
