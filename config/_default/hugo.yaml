@@ -1,11 +1,13 @@
 baseURL: "https://palo.sk/"
 languageCode: "sk"
 title: "Dominik Paľo"
-theme: hugo-profile
+theme:
+  - "hugo-profile"
+  - "hugo-shortcode-gallery"
 
 caches:
   images:
-    dir: :cacheDir/images
+    dir: ":cacheDir/images"
 
 outputs:
   home:
