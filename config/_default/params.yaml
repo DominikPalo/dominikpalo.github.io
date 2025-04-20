@@ -20,7 +20,7 @@ mathjax: false
 animate: true
 
 theme:
-  disableThemeToggle: true
+  disableThemeToggle: false
   defaultTheme: "light" # dark
 
 font:
@@ -307,3 +307,7 @@ datesFormat:
   articleRecent: "Jan 2, 2006"
 #customScripts: -| # You can add custom scripts which will be added before </body> tag
 #  <script type="text/javascript"><!-- any script here --></script>
+
+# shortcode-gallery global config
+galleryLoadJQuery: true
+galleryThumbnailResizeOptions: "600x600 q90 Lanczos"

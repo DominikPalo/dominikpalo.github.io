@@ -33,4 +33,8 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+imaging:
+  exif:
+    includeFields: ".*"
       
