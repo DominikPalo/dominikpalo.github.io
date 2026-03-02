@@ -71,11 +71,11 @@ navbar:
 
 # Hero
 hero:
-  enable: false
+  enable: true
   intro: "Ahoj, volám sa"
   title: "Dominik"
   subtitle: "a rád tvorím"
-  content: "#### Softvérový inžinier, vo voľnom čase venujúci sa hardvéru, elektronike a 3D tlači. Tzv. [_maker_](https://en.wikipedia.org/wiki/Maker_culture)"
+  content: "#### Softvérový inžinier, vo voľnom čase venujúci sa hardvéru, elektronike a 3D tlači."
   image: /images/me.jpg
   bottomImage:
     enable: true
