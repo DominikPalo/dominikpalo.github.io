@@ -71,7 +71,7 @@ navbar:
 
 # Hero
 hero:
-  enable: true
+  enable: false
   intro: "Ahoj, volám sa"
   title: "Dominik"
   subtitle: "a rád tvorím"
@@ -100,7 +100,7 @@ hero:
 
 # About
 about:
-  enable: true
+  enable: false
   title: "O mne"
   # image: "/images/chip.png"
   content: |-
