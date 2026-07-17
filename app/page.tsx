@@ -110,7 +110,7 @@ const copy = {
       },
     ],
     experienceKicker: "03 / SKÚSENOSTI",
-    experienceTitle: "Od udalostných systémov k produktom.",
+    experienceTitle: "Technológie sa menia. Zvedavosť zostáva.",
     experience: [
       {
         years: "2014 — DNES",
@@ -277,7 +277,7 @@ const copy = {
       },
     ],
     experienceKicker: "03 / EXPERIENCE",
-    experienceTitle: "From event systems to products.",
+    experienceTitle: "Technology changes. Curiosity stays.",
     experience: [
       {
         years: "2014 — NOW",
