@@ -1087,6 +1087,234 @@ img {
   margin-top: 110px;
 }
 
+.hobbies-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 70%, rgba(255, 213, 64, 0.045), transparent 26%),
+    radial-gradient(circle at 88% 28%, rgba(53, 230, 255, 0.055), transparent 28%),
+    rgba(3, 16, 26, 0.38);
+}
+
+.hobbies-heading {
+  align-items: end;
+}
+
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 80px;
+}
+
+.hobby-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(6, 21, 34, 0.82);
+  transition:
+    transform 200ms ease,
+    border-color 200ms ease;
+}
+
+.hobby-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--line-strong);
+}
+
+.hobby-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  border-bottom: 1px solid var(--line);
+  padding: 14px 18px;
+  color: var(--muted);
+  font: 550 0.58rem var(--font-mono);
+  letter-spacing: 0.08em;
+}
+
+.hobby-card-header span:first-child {
+  color: var(--cyan);
+}
+
+.ride-visual,
+.travel-visual {
+  position: relative;
+  height: 210px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(rgba(53, 230, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(53, 230, 255, 0.04) 1px, transparent 1px),
+    var(--navy-950);
+  background-size: 24px 24px;
+}
+
+.ride-visual strong {
+  position: absolute;
+  right: 28px;
+  bottom: 24px;
+  color: var(--white);
+  font: 760 clamp(2.6rem, 5vw, 5.2rem) var(--font-mono);
+  letter-spacing: -0.09em;
+}
+
+.ride-visual small {
+  position: absolute;
+  top: 22px;
+  left: 24px;
+  color: var(--yellow);
+  font: 600 0.6rem var(--font-mono);
+  letter-spacing: 0.1em;
+}
+
+.route-line {
+  position: absolute;
+  top: 85px;
+  right: 46px;
+  left: 42px;
+  height: 2px;
+  transform: rotate(-7deg);
+  background: var(--cyan);
+  box-shadow: 0 0 14px rgba(53, 230, 255, 0.45);
+}
+
+.route-line::before,
+.route-line::after,
+.route-line i {
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translate(-50%, -50%) rotate(45deg);
+  border: 1px solid var(--cyan);
+  background: var(--navy-950);
+  content: "";
+}
+
+.route-line::before { left: 0; }
+.route-line::after { left: 100%; background: var(--yellow); border-color: var(--yellow); }
+.route-line i:nth-child(1) { left: 24%; }
+.route-line i:nth-child(2) { left: 52%; }
+.route-line i:nth-child(3) { left: 76%; }
+
+.travel-visual {
+  background:
+    linear-gradient(rgba(255, 213, 64, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 213, 64, 0.035) 1px, transparent 1px),
+    var(--navy-950);
+  background-size: 20px 20px;
+}
+
+.passport-stamp {
+  position: absolute;
+  top: 28px;
+  right: 34px;
+  display: grid;
+  width: 138px;
+  height: 138px;
+  transform: rotate(6deg);
+  place-content: center;
+  border: 1px solid var(--yellow);
+  border-radius: 50%;
+  color: var(--yellow);
+  text-align: center;
+}
+
+.passport-stamp::before,
+.passport-stamp::after {
+  position: absolute;
+  inset: 8px;
+  border: 1px dashed rgba(255, 213, 64, 0.55);
+  border-radius: 50%;
+  content: "";
+}
+
+.passport-stamp::after {
+  inset: 22px -8px;
+  border-right: 0;
+  border-left: 0;
+  border-radius: 0;
+}
+
+.passport-stamp strong {
+  font: 760 1.7rem var(--font-mono);
+  letter-spacing: 0.08em;
+}
+
+.passport-stamp small {
+  font: 600 0.55rem var(--font-mono);
+  letter-spacing: 0.14em;
+}
+
+.travel-route {
+  position: absolute;
+  top: 42px;
+  bottom: 38px;
+  left: 54px;
+  width: 190px;
+  border-top: 1px solid var(--cyan);
+  border-right: 1px solid var(--cyan);
+  border-bottom: 1px solid var(--cyan);
+  clip-path: polygon(0 0, 100% 0, 100% 38%, 68% 38%, 68% 72%, 100% 72%, 100% 100%, 0 100%);
+}
+
+.travel-route i {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 0 4px rgba(53, 230, 255, 0.12);
+}
+
+.travel-route i:nth-child(1) { top: -4px; left: 0; }
+.travel-route i:nth-child(2) { top: 34%; right: -4px; }
+.travel-route i:nth-child(3) { right: -4px; bottom: 27%; background: var(--yellow); }
+.travel-route i:nth-child(4) { bottom: -4px; left: 0; }
+
+.travel-coordinate {
+  position: absolute;
+  bottom: 18px;
+  left: 22px;
+  color: var(--muted);
+  font: 500 0.55rem var(--font-mono);
+  letter-spacing: 0.08em;
+}
+
+.hobby-content {
+  padding: clamp(28px, 4vw, 50px);
+}
+
+.hobby-content h3 {
+  margin: 0;
+  font-size: clamp(2rem, 3.4vw, 3.7rem);
+  font-weight: 680;
+  letter-spacing: -0.055em;
+  line-height: 1;
+}
+
+.hobby-content p {
+  max-width: 620px;
+  margin: 22px 0 0;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.hobby-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 30px;
+}
+
+.hobby-tags span {
+  border: 1px solid var(--line);
+  color: var(--cyan-soft);
+  padding: 6px 9px;
+  font: 500 0.6rem var(--font-mono);
+}
+
 .site-footer {
   padding: clamp(100px, 12vw, 180px) 0 30px;
   background: var(--navy-950);
@@ -1225,6 +1453,7 @@ img {
   .horizontal-heading,
   .experience-layout,
   .community-shell,
+  .hobbies-grid,
   .footer-main {
     grid-template-columns: 1fr;
   }
@@ -1341,6 +1570,22 @@ img {
 
   .role-row > span:nth-child(3) {
     grid-column: 2 / 4;
+  }
+
+  .ride-visual strong {
+    right: 18px;
+    font-size: clamp(2.3rem, 14vw, 3.8rem);
+  }
+
+  .travel-route {
+    left: 24px;
+    width: 140px;
+  }
+
+  .passport-stamp {
+    right: 20px;
+    width: 118px;
+    height: 118px;
   }
 
   .console-footer {

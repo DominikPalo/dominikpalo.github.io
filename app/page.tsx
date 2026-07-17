@@ -11,6 +11,7 @@ const copy = {
       work: "Projekty",
       experience: "Skúsenosti",
       community: "Komunita",
+      hobbies: "Voľný čas",
       contact: "Kontakt",
     },
     skip: "Preskočiť na obsah",
@@ -146,7 +147,21 @@ const copy = {
       ["LECTURER", "Zdieľanie elektronického know-how"],
       ["COURSE LEAD", "Praktické kurzy od nápadu k výrobku"],
     ],
-    contactKicker: "05 / SPOJME SA",
+    hobbiesKicker: "05 / OFFLINE MODE",
+    hobbiesTitle: "Keď vypnem počítač, zapnem motor alebo vyrazím ďalej.",
+    hobbiesIntro:
+      "Technológie sú veľká časť môjho sveta, ale tie najlepšie zážitky často začínajú mimo obrazovky.",
+    rideLabel: "RIDE / 01",
+    rideTitle: "Honda NC750X",
+    rideBody:
+      "Jazda na motorke je pre mňa spôsob, ako vyčistiť hlavu, zmeniť perspektívu a objavovať cestu bez pevného plánu. Najradšej zo sedla vlastnej Hondy NC750X.",
+    rideTags: ["Dve kolesá", "Otvorená cesta", "Bez pevného plánu"],
+    travelLabel: "TRAVEL / 02",
+    travelTitle: "Takmer celá Ázia",
+    travelBody:
+      "Veľmi rád cestujem — najmä po Ázii, ktorú mám precestovanú takmer celú. Fascinujú ma rozdielne kultúry, jedlo, pulzujúce mestá aj miesta ďaleko od hlavných trás.",
+    travelTags: ["Ázia", "Kultúry", "Jedlo", "Mimo hlavných trás"],
+    contactKicker: "06 / SPOJME SA",
     contactTitle: "Máte zaujímavý problém?",
     contactBody:
       "Najradšej riešim veci, pri ktorých treba spojiť viac technológií — alebo kód s kúskom hardvéru.",
@@ -163,6 +178,7 @@ const copy = {
       work: "Work",
       experience: "Experience",
       community: "Community",
+      hobbies: "Free time",
       contact: "Contact",
     },
     skip: "Skip to content",
@@ -298,7 +314,21 @@ const copy = {
       ["LECTURER", "Sharing electronics know-how"],
       ["COURSE LEAD", "Hands-on courses from idea to object"],
     ],
-    contactKicker: "05 / GET IN TOUCH",
+    hobbiesKicker: "05 / OFFLINE MODE",
+    hobbiesTitle: "When the computer goes off, the engine starts — or the journey does.",
+    hobbiesIntro:
+      "Technology is a big part of my world, but the best experiences often begin away from a screen.",
+    rideLabel: "RIDE / 01",
+    rideTitle: "Honda NC750X",
+    rideBody:
+      "Riding clears my head, changes my perspective, and turns the road itself into the destination. My Honda NC750X is my favourite way to set off without a fixed plan.",
+    rideTags: ["Two wheels", "Open road", "No fixed plan"],
+    travelLabel: "TRAVEL / 02",
+    travelTitle: "Almost all of Asia",
+    travelBody:
+      "I love travelling, especially across Asia — a continent I have explored almost in its entirety. I’m drawn to its different cultures, food, restless cities, and places far beyond the main routes.",
+    travelTags: ["Asia", "Cultures", "Food", "Beyond the main routes"],
+    contactKicker: "06 / GET IN TOUCH",
     contactTitle: "Got an interesting problem?",
     contactBody:
       "I’m at my best when a problem connects several technologies — or code with a piece of hardware.",
@@ -316,7 +346,7 @@ const personSchema = {
   "@type": "Person",
   name: "Dominik Paľo",
   url: "https://palo.sk",
-  image: "https://palo.sk/dominik-palo.jpg",
+  image: "https://palo.sk/dominik-palo-nerdy.png",
   jobTitle: "Senior Software Engineer",
   worksFor: [
     { "@type": "Organization", name: "Slido" },
@@ -380,6 +410,7 @@ export default function Home() {
             <a href="#work">{t.nav.work}</a>
             <a href="#experience">{t.nav.experience}</a>
             <a href="#community">{t.nav.community}</a>
+            <a href="#hobbies">{t.nav.hobbies}</a>
             <a href="#contact">{t.nav.contact}</a>
           </nav>
 
@@ -677,6 +708,78 @@ export default function Home() {
                 <span>48°09&apos;N 17°06&apos;E</span>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="section hobbies-section"
+        id="hobbies"
+        aria-labelledby="hobbies-title"
+      >
+        <div className="container">
+          <div className="section-heading horizontal-heading hobbies-heading">
+            <div>
+              <p className="section-kicker">{t.hobbiesKicker}</p>
+              <h2 id="hobbies-title">{t.hobbiesTitle}</h2>
+            </div>
+            <p>{t.hobbiesIntro}</p>
+          </div>
+
+          <div className="hobbies-grid">
+            <article className="hobby-card ride-card">
+              <div className="hobby-card-header">
+                <span>{t.rideLabel}</span>
+                <span>ROAD STATUS: OPEN</span>
+              </div>
+              <div className="ride-visual" aria-hidden="true">
+                <div className="route-line">
+                  <i />
+                  <i />
+                  <i />
+                </div>
+                <strong>NC750X</strong>
+                <small>RIDE MODE / ON</small>
+              </div>
+              <div className="hobby-content">
+                <h3>{t.rideTitle}</h3>
+                <p>{t.rideBody}</p>
+                <div className="hobby-tags">
+                  {t.rideTags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </article>
+
+            <article className="hobby-card travel-card">
+              <div className="hobby-card-header">
+                <span>{t.travelLabel}</span>
+                <span>REGION: ASIA</span>
+              </div>
+              <div className="travel-visual" aria-hidden="true">
+                <div className="travel-route">
+                  <i />
+                  <i />
+                  <i />
+                  <i />
+                </div>
+                <div className="passport-stamp">
+                  <strong>ASIA</strong>
+                  <small>EXPLORED</small>
+                </div>
+                <span className="travel-coordinate">34.0479° N / 100.6197° E</span>
+              </div>
+              <div className="hobby-content">
+                <h3>{t.travelTitle}</h3>
+                <p>{t.travelBody}</p>
+                <div className="hobby-tags">
+                  {t.travelTags.map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
