@@ -341,37 +341,6 @@ const copy = {
   },
 } as const;
 
-const personSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  name: "Dominik Paľo",
-  url: "https://palo.sk",
-  image: "https://palo.sk/dominik-palo-nerdy.png",
-  jobTitle: "Senior Software Engineer",
-  worksFor: [
-    { "@type": "Organization", name: "Slido" },
-    { "@type": "Organization", name: "Cisco" },
-  ],
-  homeLocation: {
-    "@type": "Place",
-    name: "Bratislava, Slovakia",
-  },
-  sameAs: [
-    "https://github.com/DominikPalo",
-    "https://www.linkedin.com/in/dpalo",
-  ],
-  knowsAbout: [
-    "Swift",
-    "C#",
-    "TypeScript",
-    "Native application development",
-    "IoT",
-    "Open hardware",
-    "PCB design",
-    "3D printing",
-  ],
-};
-
 export default function Home() {
   const [language, setLanguage] = useState<Language>("sk");
   const t = copy[language];
@@ -382,10 +351,6 @@ export default function Home() {
 
   return (
     <main id="content">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
       <a className="skip-link" href="#about">
         {t.skip}
       </a>

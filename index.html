@@ -3,64 +3,142 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Dominik Paľo" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
     <meta
       name="description"
-      content="Senior software engineer at Slido/Cisco, maker, open-hardware enthusiast and lecturer at MakerSpace Bratislava."
+      content="Dominik Paľo (Dominik Palo) je senior softvérový inžinier v Slido/Cisco, maker a lektor z Bratislavy so záujmom o hardvér, IoT a 3D tlač."
     />
     <meta name="theme-color" content="#061522" />
     <link rel="canonical" href="https://palo.sk/" />
+    <link rel="me" href="https://github.com/DominikPalo" />
+    <link rel="me" href="https://www.linkedin.com/in/dpalo" />
+    <link rel="me" href="https://stackoverflow.com/users/1143397/dominik-palo" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
     <link rel="icon" href="/favicon.ico" sizes="48x48" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="profile" />
     <meta property="og:locale" content="sk_SK" />
     <meta property="og:locale:alternate" content="en_US" />
     <meta property="og:site_name" content="Dominik Paľo" />
-    <meta property="og:title" content="Dominik Paľo — Software Engineer × Maker" />
+    <meta property="og:title" content="Dominik Paľo — softvérový inžinier × maker" />
     <meta
       property="og:description"
-      content="Senior software engineer at Slido/Cisco, maker, open-hardware enthusiast and lecturer at MakerSpace Bratislava."
+      content="Senior softvérový inžinier v Slido/Cisco, maker a lektor z Bratislavy. Softvér, elektronika, IoT, open hardware, 3D modelovanie a tlač."
     />
     <meta property="og:url" content="https://palo.sk/" />
     <meta property="og:image" content="https://palo.sk/og.png" />
     <meta property="og:image:width" content="1536" />
     <meta property="og:image:height" content="1024" />
-    <meta property="og:image:alt" content="Dominik Paľo — Software Engineer × Maker" />
+    <meta property="og:image:alt" content="Dominik Paľo — softvérový inžinier a maker" />
+    <meta property="profile:first_name" content="Dominik" />
+    <meta property="profile:last_name" content="Paľo" />
+    <meta property="profile:username" content="dpalo" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Dominik Paľo — Software Engineer × Maker" />
+    <meta name="twitter:title" content="Dominik Paľo — softvérový inžinier × maker" />
     <meta
       name="twitter:description"
-      content="Senior software engineer at Slido/Cisco, maker, open-hardware enthusiast and lecturer at MakerSpace Bratislava."
+      content="Senior softvérový inžinier v Slido/Cisco, maker a lektor z Bratislavy. Softvér, elektronika, IoT a 3D tlač."
     />
     <meta name="twitter:image" content="https://palo.sk/og.png" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Dominik Paľo",
-        "url": "https://palo.sk",
-        "image": "https://palo.sk/dominik-palo-nerdy.png",
-        "jobTitle": "Senior Software Engineer",
-        "worksFor": [
-          { "@type": "Organization", "name": "Slido" },
-          { "@type": "Organization", "name": "Cisco" }
-        ],
-        "homeLocation": {
-          "@type": "Place",
-          "name": "Bratislava, Slovakia"
-        },
-        "sameAs": [
-          "https://github.com/DominikPalo",
-          "https://www.linkedin.com/in/dpalo"
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://palo.sk/#website",
+            "url": "https://palo.sk/",
+            "name": "Dominik Paľo",
+            "alternateName": "Dominik Palo",
+            "inLanguage": ["sk", "en"],
+            "publisher": { "@id": "https://palo.sk/#person" }
+          },
+          {
+            "@type": "ProfilePage",
+            "@id": "https://palo.sk/#profile",
+            "url": "https://palo.sk/",
+            "name": "Dominik Paľo — softvérový inžinier a maker",
+            "description": "Osobný profil Dominika Paľa, senior softvérového inžiniera, makera a lektora z Bratislavy.",
+            "dateModified": "2026-07-17",
+            "inLanguage": ["sk", "en"],
+            "isPartOf": { "@id": "https://palo.sk/#website" },
+            "mainEntity": { "@id": "https://palo.sk/#person" }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://palo.sk/#person",
+            "name": "Dominik Paľo",
+            "alternateName": "Dominik Palo",
+            "identifier": "dpalo",
+            "givenName": "Dominik",
+            "familyName": "Paľo",
+            "url": "https://palo.sk/",
+            "mainEntityOfPage": { "@id": "https://palo.sk/#profile" },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://palo.sk/dominik-palo-nerdy.png",
+              "width": 1254,
+              "height": 1254
+            },
+            "description": "Senior softvérový inžinier v Slido/Cisco, maker, lektor a dobrovoľník v MakerSpace Bratislava.",
+            "jobTitle": "Senior Software Engineer",
+            "worksFor": {
+              "@type": "Organization",
+              "name": "Slido",
+              "url": "https://www.slido.com/",
+              "parentOrganization": {
+                "@type": "Organization",
+                "name": "Cisco",
+                "url": "https://www.cisco.com/"
+              }
+            },
+            "affiliation": {
+              "@type": "Organization",
+              "name": "MakerSpace Bratislava",
+              "url": "https://www.msba.sk/"
+            },
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "Slovenská technická univerzita v Bratislave",
+              "url": "https://www.stuba.sk/"
+            },
+            "homeLocation": {
+              "@type": "Place",
+              "name": "Bratislava, Slovakia"
+            },
+            "knowsAbout": [
+              "Native application development",
+              "Swift",
+              "C#",
+              "TypeScript",
+              "React",
+              "IoT",
+              "Open hardware",
+              "PCB design",
+              "3D modelling",
+              "Autodesk Fusion",
+              "3D printing"
+            ],
+            "sameAs": [
+              "https://github.com/DominikPalo",
+              "https://www.linkedin.com/in/dpalo",
+              "https://stackoverflow.com/users/1143397/dominik-palo",
+              "https://www.instagram.com/dominik.palo"
+            ]
+          }
         ]
       }
     </script>
 
-    <title>Dominik Paľo — Software Engineer × Maker</title>
+    <title>Dominik Paľo — softvérový inžinier a maker</title>
   </head>
   <body>
     <div id="root"></div>
