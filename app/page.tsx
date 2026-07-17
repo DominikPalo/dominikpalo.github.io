@@ -137,15 +137,16 @@ const copy = {
         href: "https://www.fei.stuba.sk",
       },
     ],
-    communityKicker: "04 / COMMUNITY MODE",
+    communityKicker: "04 / KOMUNITNÝ REŽIM",
     communityTitle: "Technológia má zmysel, keď sa zdieľa.",
     communityBody:
       "Vo voľnom čase pôsobím v MakerSpace Bratislava — komunitnej dielni v Novej Cvernovke. Dobrovoľníčim pri jej fungovaní, pomáham ľuďom s elektronikou a maker projektmi, lektorujem a vediem praktické kurzy.",
     communityCta: "Navštíviť MakerSpace Bratislava",
+    communityConsole: "MSBA://KOMUNITA",
     communityRoles: [
-      ["VOLUNTEER", "Pomoc komunite a dielni"],
-      ["LECTURER", "Zdieľanie elektronického know-how"],
-      ["COURSE LEAD", "Praktické kurzy od nápadu k výrobku"],
+      ["DOBROVOĽNÍK", "Pomoc komunite a dielni"],
+      ["LEKTOR", "Zdieľanie elektronického know-how"],
+      ["VEDENIE KURZOV", "Praktické kurzy od nápadu k výrobku"],
     ],
     hobbiesKicker: "05 / OFFLINE MODE",
     hobbiesTitle: "Keď nie som za počítačom, som na cestách.",
@@ -323,6 +324,7 @@ const copy = {
     communityBody:
       "In my free time, I’m active at MakerSpace Bratislava — a community workshop at Nová Cvernovka. I volunteer to help run the space, support people with electronics and maker projects, teach, and lead hands-on courses.",
     communityCta: "Visit MakerSpace Bratislava",
+    communityConsole: "MSBA://COMMUNITY",
     communityRoles: [
       ["VOLUNTEER", "Helping the community and workshop"],
       ["LECTURER", "Sharing electronics know-how"],
@@ -703,7 +705,7 @@ export default function Home() {
 
             <div className="community-console">
               <div className="console-header">
-                <span>MSBA://COMMUNITY</span>
+                <span>{t.communityConsole}</span>
                 <span>NOVÁ CVERNOVKA</span>
               </div>
               {t.communityRoles.map(([role, detail], index) => (
