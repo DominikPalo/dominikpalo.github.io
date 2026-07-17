@@ -178,7 +178,6 @@ const copy = {
     contactMessage: "Správa",
     contactMessagePlaceholder: "Napíšte mi viac o vašom nápade alebo probléme...",
     contactSend: "Odoslať správu",
-    contactProtection: "Chránené pomocou CAPTCHA a skrytého honeypot poľa.",
     contactSuccess: "Správa bola odoslaná. Ozvem sa čo najskôr.",
     footerNote: "Navrhnuté medzi kódom a cínom.",
     links: {
@@ -360,7 +359,6 @@ const copy = {
     contactMessage: "Message",
     contactMessagePlaceholder: "Tell me more about your idea or problem...",
     contactSend: "Send message",
-    contactProtection: "Protected by CAPTCHA and a hidden honeypot field.",
     contactSuccess: "Your message has been sent. I’ll get back to you soon.",
     footerNote: "Designed between code and solder.",
     links: {
@@ -894,12 +892,7 @@ export default function Home() {
               </div>
 
               <div className="contact-form-footer">
-                <p id="contact-protection">{t.contactProtection}</p>
-                <button
-                  className="button button-primary"
-                  type="submit"
-                  aria-describedby="contact-protection"
-                >
+                <button className="button button-primary" type="submit">
                   {t.contactSend}
                   <span aria-hidden="true">↗</span>
                 </button>
