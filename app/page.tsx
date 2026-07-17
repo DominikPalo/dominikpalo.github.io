@@ -22,7 +22,7 @@ const copy = {
     heroTitleTop: "Tvorím softvér,",
     heroTitleBottom: "ktorý siaha za obrazovku.",
     heroLead:
-      "Cez deň vyvíjam natívne aplikácie a integrácie v Slido. Po večeroch navrhujem dosky, programujem mikrokontroléry a modelujem veci pre 3D tlač, ktoré som si mohol jednoducho kúpiť.",
+      "Cez deň vyvíjam natívne aplikácie a integrácie v Slido. Po večeroch navrhujem dosky, programujem mikrokontroléry, modelujem vlastné dizajny a vyrábam ich pomocou 3D tlače.",
     heroPrimary: "Pozrieť projekty",
     heroSecondary: "Otvoriť GitHub",
     portraitAlt: "Dominik Paľo",
@@ -189,7 +189,7 @@ const copy = {
     heroTitleTop: "I build software",
     heroTitleBottom: "that reaches beyond the screen.",
     heroLead:
-      "By day, I build native applications and integrations at Slido. By night, I design circuit boards, program microcontrollers, and model things for 3D printing that I could have simply bought.",
+      "By day, I build native applications and integrations at Slido. By night, I design circuit boards, program microcontrollers, create my own 3D models, and bring them to life through 3D printing.",
     heroPrimary: "Explore my work",
     heroSecondary: "Open GitHub",
     portraitAlt: "Dominik Paľo",
