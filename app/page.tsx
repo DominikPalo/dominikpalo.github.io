@@ -463,7 +463,7 @@ export default function Home() {
             </div>
             <div className="profile-visual">
               <div className="portrait-frame">
-                <img src="/dominik-palo.jpg" alt={t.portraitAlt} />
+                <img src="/dominik-palo-nerdy.png" alt={t.portraitAlt} />
                 <span className="corner corner-tl" />
                 <span className="corner corner-tr" />
                 <span className="corner corner-bl" />
