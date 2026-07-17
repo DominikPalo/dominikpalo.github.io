@@ -165,6 +165,20 @@ const copy = {
     contactTitle: "Máte zaujímavý problém?",
     contactBody:
       "Najradšej riešim veci, pri ktorých treba spojiť viac technológií — alebo kód s kúskom hardvéru.",
+    contactFormLabel: "SPRÁVA / SECURE CHANNEL",
+    contactFormEndpoint: "ENDPOINT: SÚKROMNÁ SCHRÁNKA",
+    contactFormReady: "KANÁL PRIPRAVENÝ",
+    contactName: "Meno",
+    contactNamePlaceholder: "Ako sa voláte?",
+    contactEmail: "E-mail",
+    contactEmailPlaceholder: "vas@email.sk",
+    contactSubject: "Predmet",
+    contactSubjectPlaceholder: "O čom sa chcete porozprávať?",
+    contactMessage: "Správa",
+    contactMessagePlaceholder: "Napíšte mi viac o vašom nápade alebo probléme...",
+    contactSend: "Odoslať správu",
+    contactProtection: "Chránené pomocou CAPTCHA a skrytého honeypot poľa.",
+    contactSuccess: "Správa bola odoslaná. Ozvem sa čo najskôr.",
     footerNote: "Navrhnuté medzi kódom a cínom.",
     links: {
       github: "GitHub",
@@ -332,6 +346,20 @@ const copy = {
     contactTitle: "Got an interesting problem?",
     contactBody:
       "I’m at my best when a problem connects several technologies — or code with a piece of hardware.",
+    contactFormLabel: "MESSAGE / SECURE CHANNEL",
+    contactFormEndpoint: "ENDPOINT: PRIVATE INBOX",
+    contactFormReady: "CHANNEL READY",
+    contactName: "Name",
+    contactNamePlaceholder: "What should I call you?",
+    contactEmail: "Email",
+    contactEmailPlaceholder: "you@email.com",
+    contactSubject: "Subject",
+    contactSubjectPlaceholder: "What would you like to discuss?",
+    contactMessage: "Message",
+    contactMessagePlaceholder: "Tell me more about your idea or problem...",
+    contactSend: "Send message",
+    contactProtection: "Protected by CAPTCHA and a hidden honeypot field.",
+    contactSuccess: "Your message has been sent. I’ll get back to you soon.",
     footerNote: "Designed between code and solder.",
     links: {
       github: "GitHub",
@@ -343,11 +371,29 @@ const copy = {
 
 export default function Home() {
   const [language, setLanguage] = useState<Language>("sk");
+  const [messageSent, setMessageSent] = useState(false);
   const t = copy[language];
 
   useEffect(() => {
     document.documentElement.lang = language;
   }, [language]);
+
+  useEffect(() => {
+    const query = new URLSearchParams(window.location.search);
+
+    if (query.get("message") !== "sent") {
+      return;
+    }
+
+    setMessageSent(true);
+    query.delete("message");
+    const remainingQuery = query.toString();
+    window.history.replaceState(
+      null,
+      "",
+      `${window.location.pathname}${remainingQuery ? `?${remainingQuery}` : ""}${window.location.hash}`,
+    );
+  }, []);
 
   return (
     <main id="content">
@@ -757,6 +803,113 @@ export default function Home() {
               <h2>{t.contactTitle}</h2>
             </div>
             <p>{t.contactBody}</p>
+          </div>
+
+          <div className="contact-channel">
+            <div className="contact-channel-meta">
+              <div>
+                <span className="contact-channel-label">{t.contactFormLabel}</span>
+                <strong>{t.contactFormEndpoint}</strong>
+              </div>
+              <div className="contact-channel-status">
+                <span aria-hidden="true" />
+                {t.contactFormReady}
+              </div>
+            </div>
+
+            <form
+              className="contact-form"
+              action="https://formsubmit.co/4ff4fb7e953b3b7d36a5f267829c9a01"
+              method="POST"
+            >
+              <input type="hidden" name="_subject" value="Nová správa z palo.sk" />
+              <input type="hidden" name="_template" value="table" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://palo.sk/?message=sent#contact"
+              />
+              <input type="hidden" name="_url" value="https://palo.sk/#contact" />
+
+              <div className="contact-form-trap" aria-hidden="true">
+                <label htmlFor="contact-company">Company website</label>
+                <input
+                  id="contact-company"
+                  type="text"
+                  name="_honey"
+                  tabIndex={-1}
+                  autoComplete="off"
+                />
+              </div>
+
+              <div className="contact-form-grid">
+                <label className="contact-field">
+                  <span>{t.contactName}</span>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder={t.contactNamePlaceholder}
+                    maxLength={100}
+                    autoComplete="name"
+                    required
+                  />
+                </label>
+
+                <label className="contact-field">
+                  <span>{t.contactEmail}</span>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder={t.contactEmailPlaceholder}
+                    maxLength={200}
+                    autoComplete="email"
+                    required
+                  />
+                </label>
+
+                <label className="contact-field contact-field-wide">
+                  <span>{t.contactSubject}</span>
+                  <input
+                    type="text"
+                    name="subject"
+                    placeholder={t.contactSubjectPlaceholder}
+                    maxLength={160}
+                    required
+                  />
+                </label>
+
+                <label className="contact-field contact-field-wide">
+                  <span>{t.contactMessage}</span>
+                  <textarea
+                    name="message"
+                    placeholder={t.contactMessagePlaceholder}
+                    minLength={10}
+                    maxLength={5000}
+                    rows={7}
+                    required
+                  />
+                </label>
+              </div>
+
+              <div className="contact-form-footer">
+                <p id="contact-protection">{t.contactProtection}</p>
+                <button
+                  className="button button-primary"
+                  type="submit"
+                  aria-describedby="contact-protection"
+                >
+                  {t.contactSend}
+                  <span aria-hidden="true">↗</span>
+                </button>
+              </div>
+
+              {messageSent && (
+                <p className="contact-form-success" role="status">
+                  <span aria-hidden="true">✓</span>
+                  {t.contactSuccess}
+                </p>
+              )}
+            </form>
           </div>
 
           <div className="social-links">

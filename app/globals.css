@@ -1335,6 +1335,176 @@ img {
   margin-bottom: 8px;
 }
 
+.contact-channel {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.38fr) minmax(0, 1fr);
+  margin-top: 80px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(rgba(53, 230, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(53, 230, 255, 0.025) 1px, transparent 1px),
+    rgba(6, 21, 34, 0.76);
+  background-size: 28px 28px;
+}
+
+.contact-channel-meta {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 60px;
+  border-right: 1px solid var(--line);
+  padding: clamp(28px, 4vw, 48px);
+}
+
+.contact-channel-label {
+  display: block;
+  color: var(--cyan);
+  font: 600 0.62rem var(--font-mono);
+  letter-spacing: 0.1em;
+}
+
+.contact-channel-meta strong {
+  display: block;
+  margin-top: 20px;
+  color: var(--white);
+  font: 650 clamp(1rem, 1.6vw, 1.35rem) var(--font-mono);
+  overflow-wrap: anywhere;
+}
+
+.contact-channel-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font: 550 0.58rem var(--font-mono);
+  letter-spacing: 0.09em;
+}
+
+.contact-channel-status span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 12px rgba(53, 230, 255, 0.7);
+  animation: status-pulse 2.2s ease-in-out infinite;
+}
+
+.contact-form {
+  position: relative;
+  padding: clamp(28px, 4vw, 52px);
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px 22px;
+}
+
+.contact-field {
+  display: grid;
+  gap: 10px;
+}
+
+.contact-field-wide {
+  grid-column: 1 / -1;
+}
+
+.contact-field > span {
+  color: var(--cyan-soft);
+  font: 600 0.64rem var(--font-mono);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  outline: 0;
+  background: rgba(3, 16, 26, 0.82);
+  color: var(--white);
+  padding: 15px 16px;
+  font: inherit;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+
+.contact-field textarea {
+  min-height: 180px;
+  resize: vertical;
+  line-height: 1.65;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: rgba(154, 182, 196, 0.62);
+}
+
+.contact-field input:hover,
+.contact-field textarea:hover {
+  border-color: rgba(53, 230, 255, 0.4);
+}
+
+.contact-field input:focus-visible,
+.contact-field textarea:focus-visible {
+  border-color: var(--cyan);
+  background: var(--navy-950);
+  box-shadow: 0 0 0 3px rgba(53, 230, 255, 0.1);
+}
+
+.contact-form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.contact-form-footer p {
+  max-width: 390px;
+  margin: 0;
+  color: var(--muted);
+  font: 500 0.59rem/1.6 var(--font-mono);
+}
+
+.contact-form-footer .button {
+  flex: 0 0 auto;
+  cursor: pointer;
+}
+
+.contact-form-success {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 28px 0 0;
+  border: 1px solid rgba(53, 230, 255, 0.42);
+  background: rgba(53, 230, 255, 0.08);
+  color: var(--cyan-soft);
+  padding: 14px 16px;
+  font: 550 0.72rem var(--font-mono);
+}
+
+.contact-form-success span {
+  color: var(--yellow);
+}
+
+.contact-form-trap {
+  position: absolute;
+  top: -10000px;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact-channel + .social-links {
+  margin-top: 40px;
+}
+
 .social-links {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1454,8 +1624,17 @@ img {
   .experience-layout,
   .community-shell,
   .hobbies-grid,
+  .contact-channel,
   .footer-main {
     grid-template-columns: 1fr;
+  }
+
+  .contact-channel-meta {
+    min-height: auto;
+    flex-direction: row;
+    align-items: end;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
   }
 
   .profile-system {
@@ -1594,6 +1773,29 @@ img {
 
   .social-links {
     grid-template-columns: 1fr;
+  }
+
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-field-wide {
+    grid-column: auto;
+  }
+
+  .contact-form-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .contact-form-footer .button {
+    width: 100%;
+  }
+
+  .contact-channel-meta {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
   }
 
   .social-links a {
