@@ -22,7 +22,7 @@ const copy = {
     heroTitleTop: "Tvorím softvér,",
     heroTitleBottom: "ktorý siaha za obrazovku.",
     heroLead:
-      "Cez deň vyvíjam natívne aplikácie a integrácie v Slido. Po večeroch navrhujem dosky, programujem mikrokontroléry a tlačím veci, ktoré som si mohol jednoducho kúpiť.",
+      "Cez deň vyvíjam natívne aplikácie a integrácie v Slido. Po večeroch navrhujem dosky, programujem mikrokontroléry a modelujem veci pre 3D tlač, ktoré som si mohol jednoducho kúpiť.",
     heroPrimary: "Pozrieť projekty",
     heroSecondary: "Otvoriť GitHub",
     portraitAlt: "Dominik Paľo",
@@ -31,7 +31,7 @@ const copy = {
     systemHardware: "HARDWARE",
     systemCommunity: "COMMUNITY",
     systemSoftwareValue: "Swift · C# · TypeScript",
-    systemHardwareValue: "PCB · IoT · 3D print",
+    systemHardwareValue: "PCB · IoT · 3D CAD",
     systemCommunityValue: "Mentoring · Kurzy",
     metrics: [
       { value: "2014 → DNES", label: "Slido / Cisco" },
@@ -48,9 +48,9 @@ const copy = {
       "V Slido, ktoré je súčasťou Cisco, tvorím integrácie pre PowerPoint na macOS aj Windows. Primárne pracujem so Swiftom, C, C++ a VBA; prispievam aj do .NET/C# a React/TypeScript častí produktu.",
     makerTitle: "MAKER & MENTOR",
     makerBody:
-      "Navrhujem PCB, programujem ESP32, STM32 či AVR a modelujem súčiastky pre 3D tlač. V MakerSpace Bratislava dobrovoľníčim, odovzdávam skúsenosti ako lektor a vediem praktické kurzy.",
+      "Navrhujem PCB a programujem mikrokontroléry ESP32, STM32 či AVR. Mám skúsenosti s 3D modelovaním a obzvlášť ma baví navrhovať funkčné diely a modely pre 3D tlač v Autodesk Fusion. V MakerSpace Bratislava dobrovoľníčim, odovzdávam skúsenosti ako lektor a vediem praktické kurzy.",
     stackLabel: "AKTÍVNY TOOLCHAIN",
-    stack: ["Swift", "C#", "TypeScript", "React", "Node.js", "C / C++", "ESP32", "KiCad", "Fusion", "3D tlač"],
+    stack: ["Swift", "C#", "TypeScript", "React", "Node.js", "C / C++", "ESP32", "KiCad", "Autodesk Fusion", "3D tlač"],
     workKicker: "02 / VYBRANÉ PROJEKTY",
     workTitle: "Veci, ktoré fungujú v reálnom svete.",
     workIntro:
@@ -189,7 +189,7 @@ const copy = {
     heroTitleTop: "I build software",
     heroTitleBottom: "that reaches beyond the screen.",
     heroLead:
-      "By day, I build native applications and integrations at Slido. By night, I design circuit boards, program microcontrollers, and 3D-print things I could have simply bought.",
+      "By day, I build native applications and integrations at Slido. By night, I design circuit boards, program microcontrollers, and model things for 3D printing that I could have simply bought.",
     heroPrimary: "Explore my work",
     heroSecondary: "Open GitHub",
     portraitAlt: "Dominik Paľo",
@@ -198,7 +198,7 @@ const copy = {
     systemHardware: "HARDWARE",
     systemCommunity: "COMMUNITY",
     systemSoftwareValue: "Swift · C# · TypeScript",
-    systemHardwareValue: "PCB · IoT · 3D print",
+    systemHardwareValue: "PCB · IoT · 3D CAD",
     systemCommunityValue: "Mentoring · Courses",
     metrics: [
       { value: "2014 → NOW", label: "Slido / Cisco" },
@@ -215,9 +215,9 @@ const copy = {
       "At Slido, part of Cisco, I build PowerPoint integrations for macOS and Windows. My main stack includes Swift, C, C++, and VBA; I also contribute to the .NET/C# and React/TypeScript parts of the product.",
     makerTitle: "MAKER & MENTOR",
     makerBody:
-      "I design PCBs, program ESP32, STM32, and AVR microcontrollers, and model parts for 3D printing. At MakerSpace Bratislava, I volunteer, share knowledge as a lecturer, and lead hands-on courses.",
+      "I design PCBs and program ESP32, STM32, and AVR microcontrollers. I’m experienced in 3D modelling and especially enjoy designing functional parts and models for 3D printing in Autodesk Fusion. At MakerSpace Bratislava, I volunteer, share knowledge as a lecturer, and lead hands-on courses.",
     stackLabel: "ACTIVE TOOLCHAIN",
-    stack: ["Swift", "C#", "TypeScript", "React", "Node.js", "C / C++", "ESP32", "KiCad", "Fusion", "3D printing"],
+    stack: ["Swift", "C#", "TypeScript", "React", "Node.js", "C / C++", "ESP32", "KiCad", "Autodesk Fusion", "3D printing"],
     workKicker: "02 / SELECTED WORK",
     workTitle: "Things that work in the real world.",
     workIntro:
