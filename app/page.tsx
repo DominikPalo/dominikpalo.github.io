@@ -36,7 +36,7 @@ const copy = {
       { value: "2014 → DNES", label: "Slido / Cisco" },
       { value: "macOS + Windows", label: "Natívny vývoj" },
       { value: "96", label: "Verejných repozitárov" },
-      { value: "130★", label: "ESP32 RF Receiver" },
+      { value: "MakerSpace", label: "Lektor & dobrovoľník" },
     ],
     aboutKicker: "01 / O MNE",
     aboutTitle: "Medzi kódom a spájkovačkou.",
@@ -79,16 +79,6 @@ const copy = {
       },
       {
         index: "03",
-        title: "ESP32 RF Receiver",
-        type: "OPEN HARDWARE",
-        description:
-          "Open-source bezdrôtový prijímač pre 315/433 MHz ASK moduly postavený na ESP-IDF. Najúspešnejší verejný repozitár s 130+ hviezdami.",
-        tags: ["ESP32", "C", "ESP-IDF", "RF"],
-        href: "https://github.com/DominikPalo/esp32-rf-receiver",
-        image: "/projects/esp32-rf.png",
-      },
-      {
-        index: "04",
         title: "Slido Switcher",
         type: "NATIVE DESKTOP / 2017—2025",
         description:
@@ -98,7 +88,7 @@ const copy = {
         image: "/projects/slido-switcher.png",
       },
       {
-        index: "05",
+        index: "04",
         title: "Slido for Slack",
         type: "PRODUCT INTEGRATION / 2018—2020",
         description:
@@ -108,7 +98,7 @@ const copy = {
         image: "/projects/slido-slack.png",
       },
       {
-        index: "06",
+        index: "05",
         title: "Arduino Smart Home",
         type: "DEAN'S AWARD / 2013",
         description:
@@ -198,7 +188,7 @@ const copy = {
       { value: "2014 → NOW", label: "Slido / Cisco" },
       { value: "macOS + Windows", label: "Native development" },
       { value: "96", label: "Public repositories" },
-      { value: "130★", label: "ESP32 RF Receiver" },
+      { value: "MakerSpace", label: "Lecturer & volunteer" },
     ],
     aboutKicker: "01 / ABOUT",
     aboutTitle: "Between code and a soldering iron.",
@@ -241,16 +231,6 @@ const copy = {
       },
       {
         index: "03",
-        title: "ESP32 RF Receiver",
-        type: "OPEN HARDWARE",
-        description:
-          "An open-source wireless receiver for 315/433 MHz ASK modules built on ESP-IDF. My most popular public repository with 130+ stars.",
-        tags: ["ESP32", "C", "ESP-IDF", "RF"],
-        href: "https://github.com/DominikPalo/esp32-rf-receiver",
-        image: "/projects/esp32-rf.png",
-      },
-      {
-        index: "04",
         title: "Slido Switcher",
         type: "NATIVE DESKTOP / 2017—2025",
         description:
@@ -260,7 +240,7 @@ const copy = {
         image: "/projects/slido-switcher.png",
       },
       {
-        index: "05",
+        index: "04",
         title: "Slido for Slack",
         type: "PRODUCT INTEGRATION / 2018—2020",
         description:
@@ -270,7 +250,7 @@ const copy = {
         image: "/projects/slido-slack.png",
       },
       {
-        index: "06",
+        index: "05",
         title: "Arduino Smart Home",
         type: "DEAN'S AWARD / 2013",
         description:
