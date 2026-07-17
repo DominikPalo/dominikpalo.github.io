@@ -137,7 +137,7 @@ const copy = {
         href: "https://www.fei.stuba.sk",
       },
     ],
-    communityKicker: "04 / KOMUNITNÝ REŽIM",
+    communityKicker: "04 / COMMUNITY MODE",
     communityTitle: "Technológia má zmysel, keď sa zdieľa.",
     communityBody:
       "Vo voľnom čase pôsobím v MakerSpace Bratislava — komunitnej dielni v Novej Cvernovke. Dobrovoľníčim pri jej fungovaní, pomáham ľuďom s elektronikou a maker projektmi, lektorujem a vediem praktické kurzy.",
