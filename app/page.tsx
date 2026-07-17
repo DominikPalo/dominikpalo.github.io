@@ -160,11 +160,10 @@ const copy = {
     contactTitle: "Máte zaujímavý problém?",
     contactBody:
       "Najradšej riešim veci, pri ktorých treba spojiť viac technológií — alebo kód s kúskom hardvéru.",
-    footerNote: "Navrhnuté medzi kódom, cínom a kávou.",
+    footerNote: "Navrhnuté medzi kódom a cínom.",
     links: {
       github: "GitHub",
       linkedin: "LinkedIn",
-      orcid: "ORCID",
       instagram: "Instagram",
     },
   },
@@ -323,11 +322,10 @@ const copy = {
     contactTitle: "Got an interesting problem?",
     contactBody:
       "I’m at my best when a problem connects several technologies — or code with a piece of hardware.",
-    footerNote: "Designed between code, solder, and coffee.",
+    footerNote: "Designed between code and solder.",
     links: {
       github: "GitHub",
       linkedin: "LinkedIn",
-      orcid: "ORCID",
       instagram: "Instagram",
     },
   },
@@ -351,7 +349,6 @@ const personSchema = {
   sameAs: [
     "https://github.com/DominikPalo",
     "https://www.linkedin.com/in/dpalo",
-    "https://orcid.org/0009-0003-3718-0674",
   ],
   knowsAbout: [
     "Swift",
@@ -726,20 +723,11 @@ export default function Home() {
               <b aria-hidden="true">↗</b>
             </a>
             <a
-              href="https://orcid.org/0009-0003-3718-0674"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <span>03</span>
-              {t.links.orcid}
-              <b aria-hidden="true">↗</b>
-            </a>
-            <a
               href="https://www.instagram.com/dominik.palo"
               target="_blank"
               rel="noreferrer"
             >
-              <span>04</span>
+              <span>03</span>
               {t.links.instagram}
               <b aria-hidden="true">↗</b>
             </a>
