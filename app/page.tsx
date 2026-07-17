@@ -148,7 +148,7 @@ const copy = {
       ["COURSE LEAD", "Praktické kurzy od nápadu k výrobku"],
     ],
     hobbiesKicker: "05 / OFFLINE MODE",
-    hobbiesTitle: "Keď vypnem počítač, zapnem motor alebo vyrazím ďalej.",
+    hobbiesTitle: "Keď nie som za počítačom, som na cestách.",
     hobbiesIntro:
       "Technológie sú veľká časť môjho sveta, ale tie najlepšie zážitky často začínajú mimo obrazovky.",
     rideLabel: "RIDE / 01",
@@ -315,7 +315,7 @@ const copy = {
       ["COURSE LEAD", "Hands-on courses from idea to object"],
     ],
     hobbiesKicker: "05 / OFFLINE MODE",
-    hobbiesTitle: "When the computer goes off, the engine starts — or the journey does.",
+    hobbiesTitle: "When I’m away from the computer, I’m on the road.",
     hobbiesIntro:
       "Technology is a big part of my world, but the best experiences often begin away from a screen.",
     rideLabel: "RIDE / 01",
