@@ -12,6 +12,7 @@
   --line: rgba(73, 165, 196, 0.28);
   --line-strong: rgba(53, 230, 255, 0.55);
   --font-sans: Inter, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Space Grotesk Variable", Inter, "Helvetica Neue", Arial, sans-serif;
   --font-mono: "SFMono-Regular", "Cascadia Code", Menlo, Consolas, monospace;
 }
 
@@ -288,9 +289,10 @@ img {
 .hero h1 {
   max-width: 920px;
   margin: 0;
+  font-family: var(--font-display);
   font-size: clamp(3.7rem, 6.6vw, 7.4rem);
-  font-weight: 780;
-  letter-spacing: -0.075em;
+  font-weight: 700;
+  letter-spacing: -0.025em;
   line-height: 0.94;
 }
 
@@ -589,9 +591,10 @@ img {
 .community-copy h2,
 .site-footer h2 {
   margin: 0;
+  font-family: var(--font-display);
   font-size: clamp(2.65rem, 5.5vw, 5.8rem);
-  font-weight: 720;
-  letter-spacing: -0.065em;
+  font-weight: 700;
+  letter-spacing: -0.025em;
   line-height: 0.98;
 }
 
@@ -866,9 +869,10 @@ img {
 
 .project-content h3 {
   margin: 38px 0 0;
+  font-family: var(--font-display);
   font-size: clamp(1.7rem, 2.8vw, 3rem);
   font-weight: 670;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.02em;
   line-height: 1.05;
 }
 
@@ -978,8 +982,9 @@ img {
 
 .timeline-content h3 {
   margin: 14px 0 4px;
+  font-family: var(--font-display);
   font-size: clamp(1.5rem, 2.4vw, 2.35rem);
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
 }
 
 .timeline-content a {
@@ -1288,9 +1293,10 @@ img {
 
 .hobby-content h3 {
   margin: 0;
+  font-family: var(--font-display);
   font-size: clamp(2rem, 3.4vw, 3.7rem);
   font-weight: 680;
-  letter-spacing: -0.055em;
+  letter-spacing: -0.02em;
   line-height: 1;
 }
 
