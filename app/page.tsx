@@ -417,19 +417,8 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const konamiCode = [
-      "ArrowUp",
-      "ArrowUp",
-      "ArrowDown",
-      "ArrowDown",
-      "ArrowLeft",
-      "ArrowRight",
-      "ArrowLeft",
-      "ArrowRight",
-      "b",
-      "a",
-    ];
-    let pressedKeys: string[] = [];
+    const secretWord = "maker";
+    let typedCharacters = "";
 
     const handleKeyDown = (event: KeyboardEvent) => {
       const target = event.target as HTMLElement | null;
@@ -447,15 +436,17 @@ export default function Home() {
         return;
       }
 
-      const key = event.key.length === 1 ? event.key.toLowerCase() : event.key;
-      pressedKeys = [...pressedKeys, key].slice(-konamiCode.length);
+      if (event.key.length !== 1) {
+        return;
+      }
 
-      if (
-        pressedKeys.length === konamiCode.length &&
-        pressedKeys.every((pressedKey, index) => pressedKey === konamiCode[index])
-      ) {
+      typedCharacters = `${typedCharacters}${event.key.toLowerCase()}`.slice(
+        -secretWord.length,
+      );
+
+      if (typedCharacters === secretWord) {
         setMakerMode(true);
-        pressedKeys = [];
+        typedCharacters = "";
       }
     };
 
@@ -478,7 +469,7 @@ export default function Home() {
     lastBrandTap.current = now;
     brandTapCount.current += 1;
 
-    if (brandTapCount.current === 7) {
+    if (brandTapCount.current === 3) {
       brandTapCount.current = 0;
       setMakerMode(true);
     }
