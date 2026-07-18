@@ -3,6 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 
 type Language = "sk" | "en";
+type Theme = "light" | "dark";
+type ThemeSource = "system" | "user" | null;
+
+const THEME_STORAGE_KEY = "palo-theme";
 
 const copy = {
   sk: {
@@ -16,6 +20,9 @@ const copy = {
     },
     skip: "Preskočiť na obsah",
     languageLabel: "Zmeniť jazyk na angličtinu",
+    themeSwitch: "Zmeniť farebný režim",
+    themeSwitchToLight: "Prepnúť na svetlý režim",
+    themeSwitchToDark: "Prepnúť na tmavý režim",
     status: "SYSTÉM ONLINE",
     location: "Bratislava / Slovensko",
     eyebrow: "SOFTVÉROVÝ INŽINIER × MAKER",
@@ -206,6 +213,9 @@ const copy = {
     },
     skip: "Skip to content",
     languageLabel: "Switch language to Slovak",
+    themeSwitch: "Change color mode",
+    themeSwitchToLight: "Switch to light mode",
+    themeSwitchToDark: "Switch to dark mode",
     status: "SYSTEM ONLINE",
     location: "Bratislava / Slovakia",
     eyebrow: "SOFTWARE ENGINEER × MAKER",
@@ -391,6 +401,8 @@ export default function Home() {
   const [language, setLanguage] = useState<Language>("sk");
   const [messageSent, setMessageSent] = useState(false);
   const [makerMode, setMakerMode] = useState(false);
+  const [theme, setTheme] = useState<Theme | null>(null);
+  const [themeSource, setThemeSource] = useState<ThemeSource>(null);
   const brandTapCount = useRef(0);
   const lastBrandTap = useRef(0);
   const t = copy[language];
@@ -398,6 +410,60 @@ export default function Home() {
   useEffect(() => {
     document.documentElement.lang = language;
   }, [language]);
+
+  useEffect(() => {
+    const currentTheme =
+      document.documentElement.dataset.theme === "light" ? "light" : "dark";
+    let source: ThemeSource = "system";
+
+    try {
+      const storedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
+      source = storedTheme === "light" || storedTheme === "dark" ? "user" : "system";
+    } catch {
+      // System theme remains the source when browser storage is unavailable.
+    }
+
+    setTheme(currentTheme);
+    setThemeSource(source);
+  }, []);
+
+  useEffect(() => {
+    if (!theme) {
+      return;
+    }
+
+    const root = document.documentElement;
+    const themeColor = document.querySelector<HTMLMetaElement>(
+      'meta[name="theme-color"]',
+    );
+
+    root.dataset.theme = theme;
+    root.style.colorScheme = theme;
+    themeColor?.setAttribute("content", theme === "dark" ? "#10171c" : "#f5f7f6");
+
+    if (themeSource === "user") {
+      try {
+        window.localStorage.setItem(THEME_STORAGE_KEY, theme);
+      } catch {
+        // The selected theme still applies for this visit when storage is unavailable.
+      }
+    }
+  }, [theme, themeSource]);
+
+  useEffect(() => {
+    if (themeSource !== "system") {
+      return;
+    }
+
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const syncWithSystem = (event: MediaQueryListEvent | MediaQueryList) => {
+      setTheme(event.matches ? "dark" : "light");
+    };
+
+    syncWithSystem(systemTheme);
+    systemTheme.addEventListener("change", syncWithSystem);
+    return () => systemTheme.removeEventListener("change", syncWithSystem);
+  }, [themeSource]);
 
   useEffect(() => {
     const query = new URLSearchParams(window.location.search);
@@ -475,6 +541,21 @@ export default function Home() {
     }
   };
 
+  const handleThemeToggle = () => {
+    const currentTheme =
+      theme ?? (document.documentElement.dataset.theme === "light" ? "light" : "dark");
+
+    setThemeSource("user");
+    setTheme(currentTheme === "dark" ? "light" : "dark");
+  };
+
+  const themeSwitchLabel =
+    theme === "dark"
+      ? t.themeSwitchToLight
+      : theme === "light"
+        ? t.themeSwitchToDark
+        : t.themeSwitch;
+
   return (
     <main id="content">
       <a className="skip-link" href="#about">
@@ -510,22 +591,35 @@ export default function Home() {
             <a href="#contact">{t.nav.contact}</a>
           </nav>
 
-          <div className="language-switch" aria-label={t.languageLabel}>
+          <div className="header-controls">
+            <div className="language-switch" aria-label={t.languageLabel}>
+              <button
+                type="button"
+                className={language === "sk" ? "active" : ""}
+                onClick={() => setLanguage("sk")}
+                aria-pressed={language === "sk"}
+              >
+                SK
+              </button>
+              <button
+                type="button"
+                className={language === "en" ? "active" : ""}
+                onClick={() => setLanguage("en")}
+                aria-pressed={language === "en"}
+              >
+                EN
+              </button>
+            </div>
+
             <button
+              className="theme-switch"
               type="button"
-              className={language === "sk" ? "active" : ""}
-              onClick={() => setLanguage("sk")}
-              aria-pressed={language === "sk"}
+              onClick={handleThemeToggle}
+              aria-label={themeSwitchLabel}
+              title={themeSwitchLabel}
             >
-              SK
-            </button>
-            <button
-              type="button"
-              className={language === "en" ? "active" : ""}
-              onClick={() => setLanguage("en")}
-              aria-pressed={language === "en"}
-            >
-              EN
+              <span className="theme-icon theme-icon-light" aria-hidden="true" />
+              <span className="theme-icon theme-icon-dark" aria-hidden="true" />
             </button>
           </div>
         </div>

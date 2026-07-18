@@ -12,7 +12,31 @@
       name="description"
       content="Dominik Paľo (Dominik Palo) je senior softvérový inžinier v Slido/Cisco, maker a lektor z Bratislavy so záujmom o hardvér, IoT a 3D tlač."
     />
-    <meta name="theme-color" content="#061522" />
+    <meta name="theme-color" content="#10171c" />
+    <script>
+      (() => {
+        let storedTheme = null;
+
+        try {
+          storedTheme = localStorage.getItem("palo-theme");
+        } catch {
+          // System preference is still available when browser storage is blocked.
+        }
+
+        const theme =
+          storedTheme === "light" || storedTheme === "dark"
+            ? storedTheme
+            : matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        document
+          .querySelector('meta[name="theme-color"]')
+          ?.setAttribute("content", theme === "dark" ? "#10171c" : "#f5f7f6");
+      })();
+    </script>
     <link rel="canonical" href="https://palo.sk/" />
     <link rel="me" href="https://github.com/DominikPalo" />
     <link rel="me" href="https://www.linkedin.com/in/dpalo" />
@@ -67,7 +91,7 @@
             "url": "https://palo.sk/",
             "name": "Dominik Paľo — softvérový inžinier a maker",
             "description": "Osobný profil Dominika Paľa, senior softvérového inžiniera, makera a lektora z Bratislavy.",
-            "dateModified": "2026-07-17",
+            "dateModified": "2026-07-19",
             "inLanguage": ["sk", "en"],
             "isPartOf": { "@id": "https://palo.sk/#website" },
             "mainEntity": { "@id": "https://palo.sk/#person" }
