@@ -618,8 +618,12 @@ export default function Home() {
               aria-label={themeSwitchLabel}
               title={themeSwitchLabel}
             >
-              <span className="theme-icon theme-icon-light" aria-hidden="true" />
-              <span className="theme-icon theme-icon-dark" aria-hidden="true" />
+              <span className="theme-icon theme-icon-light" aria-hidden="true">
+                ☀
+              </span>
+              <span className="theme-icon theme-icon-dark" aria-hidden="true">
+                ☾
+              </span>
             </button>
           </div>
         </div>

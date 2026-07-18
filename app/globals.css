@@ -261,9 +261,10 @@ img {
 
 .theme-switch {
   display: grid;
-  width: 40px;
-  height: 40px;
-  flex: 0 0 40px;
+  width: 36px;
+  height: auto;
+  flex: 0 0 36px;
+  align-self: stretch;
   place-items: center;
   border: 1px solid var(--line);
   background: transparent;
@@ -285,32 +286,12 @@ img {
 
 .theme-icon {
   display: none;
-  position: relative;
-  width: 14px;
-  height: 14px;
+  font: 500 1rem/1 Arial, sans-serif;
 }
 
 html[data-theme="light"] .theme-icon-light,
 html[data-theme="dark"] .theme-icon-dark {
   display: block;
-}
-
-.theme-icon-light {
-  border: 2px solid currentColor;
-  border-radius: 50%;
-  box-shadow:
-    0 -6px 0 -1px currentColor,
-    0 6px 0 -1px currentColor,
-    -6px 0 0 -1px currentColor,
-    6px 0 0 -1px currentColor;
-}
-
-.theme-icon-dark {
-  border: 2px solid currentColor;
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-radius: 50%;
-  transform: rotate(24deg);
 }
 
 .hero {
