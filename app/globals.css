@@ -1155,13 +1155,16 @@ img {
   background-size: 24px 24px;
 }
 
-.ride-visual strong {
+.motorcycle-outline {
   position: absolute;
-  right: 28px;
-  bottom: 24px;
-  color: var(--white);
-  font: 760 clamp(2.6rem, 5vw, 5.2rem) var(--font-mono);
-  letter-spacing: -0.09em;
+  right: 24px;
+  bottom: 4px;
+  width: min(58%, 390px);
+  height: auto;
+  opacity: 0.86;
+  filter:
+    invert(86%) sepia(92%) saturate(1554%) hue-rotate(157deg) brightness(103%) contrast(104%)
+    drop-shadow(0 0 7px rgba(53, 230, 255, 0.24));
 }
 
 .ride-visual small {
@@ -1172,36 +1175,6 @@ img {
   font: 600 0.6rem var(--font-mono);
   letter-spacing: 0.1em;
 }
-
-.route-line {
-  position: absolute;
-  top: 85px;
-  right: 46px;
-  left: 42px;
-  height: 2px;
-  transform: rotate(-7deg);
-  background: var(--cyan);
-  box-shadow: 0 0 14px rgba(53, 230, 255, 0.45);
-}
-
-.route-line::before,
-.route-line::after,
-.route-line i {
-  position: absolute;
-  top: 50%;
-  width: 10px;
-  height: 10px;
-  transform: translate(-50%, -50%) rotate(45deg);
-  border: 1px solid var(--cyan);
-  background: var(--navy-950);
-  content: "";
-}
-
-.route-line::before { left: 0; }
-.route-line::after { left: 100%; background: var(--yellow); border-color: var(--yellow); }
-.route-line i:nth-child(1) { left: 24%; }
-.route-line i:nth-child(2) { left: 52%; }
-.route-line i:nth-child(3) { left: 76%; }
 
 .travel-visual {
   background:
@@ -1773,9 +1746,10 @@ img {
     grid-column: 2 / 4;
   }
 
-  .ride-visual strong {
-    right: 18px;
-    font-size: clamp(2.3rem, 14vw, 3.8rem);
+  .motorcycle-outline {
+    right: 12px;
+    bottom: 10px;
+    width: 68%;
   }
 
   .asia-map-outline {
