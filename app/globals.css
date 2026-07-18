@@ -1337,23 +1337,6 @@ html[data-theme="dark"] .theme-icon-dark {
   overflow-wrap: anywhere;
 }
 
-.contact-channel-status {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--muted);
-  font: 550 0.58rem var(--font-mono);
-  letter-spacing: 0.09em;
-}
-
-.contact-channel-status span {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--cyan);
-  opacity: 0.8;
-}
-
 .contact-form {
   position: relative;
   padding: clamp(28px, 4vw, 52px);

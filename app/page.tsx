@@ -194,8 +194,7 @@ const copy = {
     contactBody:
       "Ak máte otázku, nápad na spoluprácu alebo sa chcete porozprávať o technológiách či maker projektoch, napíšte mi.",
     contactFormLabel: "SPRÁVA / SECURE CHANNEL",
-    contactFormEndpoint: "ENDPOINT: SÚKROMNÁ SCHRÁNKA",
-    contactFormReady: "KANÁL PRIPRAVENÝ",
+    contactFormEndpoint: "Kontaktný formulár",
     contactName: "Meno",
     contactNamePlaceholder: "Ako sa voláte?",
     contactEmail: "E-mail",
@@ -388,8 +387,7 @@ const copy = {
     contactBody:
       "If you have a question, an idea for collaboration, or simply want to talk about technology or maker projects, send me a message.",
     contactFormLabel: "MESSAGE / SECURE CHANNEL",
-    contactFormEndpoint: "ENDPOINT: PRIVATE INBOX",
-    contactFormReady: "CHANNEL READY",
+    contactFormEndpoint: "Contact form",
     contactName: "Name",
     contactNamePlaceholder: "What should I call you?",
     contactEmail: "Email",
@@ -1093,10 +1091,6 @@ export default function Home() {
               <div>
                 <span className="contact-channel-label">{t.contactFormLabel}</span>
                 <strong>{t.contactFormEndpoint}</strong>
-              </div>
-              <div className="contact-channel-status">
-                <span aria-hidden="true" />
-                {t.contactFormReady}
               </div>
             </div>
 
