@@ -520,11 +520,6 @@ export default function Home() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [makerMode]);
 
-  useEffect(() => {
-    document.documentElement.classList.toggle("maker-mode", makerMode);
-    return () => document.documentElement.classList.remove("maker-mode");
-  }, [makerMode]);
-
   const handleBrandTap = () => {
     const now = Date.now();
 
@@ -669,12 +664,7 @@ export default function Home() {
             <div className="profile-visual">
               <div className="portrait-frame">
                 <img src="/dominik-palo-nerdy.png" alt={t.portraitAlt} />
-                <span className="corner corner-tl" />
-                <span className="corner corner-tr" />
-                <span className="corner corner-bl" />
-                <span className="corner corner-br" />
               </div>
-              <div className="scan-line" aria-hidden="true" />
               <div className="profile-index">DP—01</div>
             </div>
             <div className="system-readouts">
