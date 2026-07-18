@@ -58,6 +58,25 @@ body::after {
   pointer-events: none;
 }
 
+html.maker-mode body::before {
+  background:
+    linear-gradient(rgba(255, 213, 64, 0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 213, 64, 0.075) 1px, transparent 1px);
+  background-size: 32px 32px;
+  animation: maker-grid-shift 2.8s linear infinite;
+}
+
+html.maker-mode .brand-mark {
+  border-color: var(--yellow);
+  color: var(--yellow);
+  box-shadow: 0 0 22px rgba(255, 213, 64, 0.3);
+}
+
+html.maker-mode .scan-line {
+  background: var(--yellow);
+  box-shadow: 0 0 16px var(--yellow);
+}
+
 ::selection {
   background: var(--yellow);
   color: var(--navy-950);
@@ -1551,6 +1570,111 @@ img {
   color: var(--cyan);
 }
 
+.maker-easter-egg {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 100;
+  width: min(390px, calc(100% - 32px));
+  border: 1px solid var(--yellow);
+  background:
+    linear-gradient(135deg, rgba(255, 213, 64, 0.07), transparent 38%),
+    rgba(3, 16, 26, 0.97);
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.5),
+    0 0 32px rgba(255, 213, 64, 0.12);
+  color: var(--white);
+  padding: 18px 20px 20px;
+  animation: easter-egg-enter 260ms ease-out both;
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+}
+
+.easter-egg-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid rgba(255, 213, 64, 0.3);
+  padding-bottom: 10px;
+  color: var(--yellow);
+  font: 600 0.56rem var(--font-mono);
+  letter-spacing: 0.1em;
+}
+
+.easter-egg-header button {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border: 1px solid rgba(255, 213, 64, 0.45);
+  background: transparent;
+  color: var(--yellow);
+  cursor: pointer;
+  font: 500 1rem/1 var(--font-mono);
+}
+
+.easter-egg-header button:hover,
+.easter-egg-header button:focus-visible {
+  outline: 0;
+  background: var(--yellow);
+  color: var(--navy-950);
+}
+
+.maker-easter-egg > strong {
+  display: block;
+  margin-top: 17px;
+  color: var(--cyan);
+  font: 700 0.86rem var(--font-mono);
+  letter-spacing: 0.08em;
+}
+
+.easter-egg-output {
+  display: grid;
+  gap: 6px;
+  margin-top: 14px;
+  color: var(--muted);
+  font: 500 0.66rem/1.55 var(--font-mono);
+}
+
+.easter-egg-output span {
+  display: block;
+}
+
+.easter-egg-output b {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.easter-egg-cursor {
+  color: var(--yellow);
+  animation: easter-egg-blink 850ms steps(1) infinite;
+}
+
+.easter-egg-sparks {
+  position: absolute;
+  top: -8px;
+  right: 28px;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+}
+
+.easter-egg-sparks i {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--yellow);
+  box-shadow: 0 0 8px var(--yellow);
+  animation: easter-egg-spark 1.5s ease-out infinite;
+}
+
+.easter-egg-sparks i:nth-child(2) { --spark-x: 18px; --spark-y: -22px; animation-delay: 180ms; }
+.easter-egg-sparks i:nth-child(3) { --spark-x: -16px; --spark-y: -18px; animation-delay: 420ms; }
+.easter-egg-sparks i:nth-child(4) { --spark-x: 26px; --spark-y: -8px; animation-delay: 680ms; }
+
 @keyframes status-pulse {
   0%,
   100% { opacity: 1; }
@@ -1563,6 +1687,25 @@ img {
   10% { opacity: 0.75; }
   90% { opacity: 0.75; }
   50% { transform: translateY(260px); }
+}
+
+@keyframes maker-grid-shift {
+  to { background-position: 32px 32px; }
+}
+
+@keyframes easter-egg-enter {
+  from { transform: translateY(18px) scale(0.98); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes easter-egg-blink {
+  50% { opacity: 0; }
+}
+
+@keyframes easter-egg-spark {
+  0% { transform: translate(0, 0) scale(0.5); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(var(--spark-x, -20px), var(--spark-y, -24px)) scale(0); opacity: 0; }
 }
 
 @media (max-width: 1120px) {
@@ -1620,6 +1763,11 @@ img {
     align-items: end;
     border-right: 0;
     border-bottom: 1px solid var(--line);
+  }
+
+  .maker-easter-egg {
+    right: 16px;
+    bottom: 16px;
   }
 
   .profile-system {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Language = "sk" | "en";
 
@@ -180,6 +180,15 @@ const copy = {
     contactSend: "Odoslať správu",
     contactSuccess: "Správa bola odoslaná. Ozvem sa čo najskôr.",
     footerNote: "Navrhnuté medzi kódom a cínom.",
+    easterEgg: {
+      title: "MAKER MODE ODOMKNUTÝ",
+      close: "Zavrieť Maker Mode",
+      lines: [
+        "SPÁJKOVAČKA: 350 °C",
+        "VENTILÁCIA: ONLINE",
+        "POSLEDNÁ SKRUTKA: STÁLE NEZVESTNÁ",
+      ],
+    },
     links: {
       github: "GitHub",
       linkedin: "LinkedIn",
@@ -361,6 +370,15 @@ const copy = {
     contactSend: "Send message",
     contactSuccess: "Your message has been sent. I’ll get back to you soon.",
     footerNote: "Designed between code and solder.",
+    easterEgg: {
+      title: "MAKER MODE UNLOCKED",
+      close: "Close Maker Mode",
+      lines: [
+        "SOLDERING IRON: 350 °C",
+        "FUME EXTRACTION: ONLINE",
+        "LAST SCREW: STILL MISSING",
+      ],
+    },
     links: {
       github: "GitHub",
       linkedin: "LinkedIn",
@@ -372,6 +390,9 @@ const copy = {
 export default function Home() {
   const [language, setLanguage] = useState<Language>("sk");
   const [messageSent, setMessageSent] = useState(false);
+  const [makerMode, setMakerMode] = useState(false);
+  const brandTapCount = useRef(0);
+  const lastBrandTap = useRef(0);
   const t = copy[language];
 
   useEffect(() => {
@@ -395,6 +416,74 @@ export default function Home() {
     );
   }, []);
 
+  useEffect(() => {
+    const konamiCode = [
+      "ArrowUp",
+      "ArrowUp",
+      "ArrowDown",
+      "ArrowDown",
+      "ArrowLeft",
+      "ArrowRight",
+      "ArrowLeft",
+      "ArrowRight",
+      "b",
+      "a",
+    ];
+    let pressedKeys: string[] = [];
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement | null;
+
+      if (target?.matches("input, textarea, select, [contenteditable='true']")) {
+        return;
+      }
+
+      if (event.key === "Escape" && makerMode) {
+        setMakerMode(false);
+        return;
+      }
+
+      if (event.repeat) {
+        return;
+      }
+
+      const key = event.key.length === 1 ? event.key.toLowerCase() : event.key;
+      pressedKeys = [...pressedKeys, key].slice(-konamiCode.length);
+
+      if (
+        pressedKeys.length === konamiCode.length &&
+        pressedKeys.every((pressedKey, index) => pressedKey === konamiCode[index])
+      ) {
+        setMakerMode(true);
+        pressedKeys = [];
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [makerMode]);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("maker-mode", makerMode);
+    return () => document.documentElement.classList.remove("maker-mode");
+  }, [makerMode]);
+
+  const handleBrandTap = () => {
+    const now = Date.now();
+
+    if (now - lastBrandTap.current > 1800) {
+      brandTapCount.current = 0;
+    }
+
+    lastBrandTap.current = now;
+    brandTapCount.current += 1;
+
+    if (brandTapCount.current === 7) {
+      brandTapCount.current = 0;
+      setMakerMode(true);
+    }
+  };
+
   return (
     <main id="content">
       <a className="skip-link" href="#about">
@@ -403,7 +492,12 @@ export default function Home() {
 
       <header className="site-header">
         <div className="header-inner">
-          <a className="brand" href="#content" aria-label="Dominik Paľo">
+          <a
+            className="brand"
+            href="#content"
+            aria-label="Dominik Paľo"
+            onClick={handleBrandTap}
+          >
             <span className="brand-mark" aria-hidden="true">
               DP
             </span>
@@ -933,6 +1027,36 @@ export default function Home() {
           </div>
         </div>
       </footer>
+
+      {makerMode && (
+        <aside className="maker-easter-egg" aria-live="polite">
+          <div className="easter-egg-header">
+            <span>DP://SECRET_WORKBENCH</span>
+            <button
+              type="button"
+              onClick={() => setMakerMode(false)}
+              aria-label={t.easterEgg.close}
+            >
+              ×
+            </button>
+          </div>
+          <strong>{t.easterEgg.title}</strong>
+          <div className="easter-egg-output">
+            {t.easterEgg.lines.map((line) => (
+              <span key={line}>
+                <b aria-hidden="true">&gt;</b> {line}
+              </span>
+            ))}
+            <span className="easter-egg-cursor" aria-hidden="true">_</span>
+          </div>
+          <div className="easter-egg-sparks" aria-hidden="true">
+            <i />
+            <i />
+            <i />
+            <i />
+          </div>
+        </aside>
+      )}
     </main>
   );
 }
