@@ -746,7 +746,7 @@ export default function Home() {
               <div className="ride-visual" aria-hidden="true">
                 <img
                   className="motorcycle-outline"
-                  src="/motorcycle-outline-balanced.webp"
+                  src="/motorcycle-outline-hairline.webp"
                   alt=""
                 />
               </div>

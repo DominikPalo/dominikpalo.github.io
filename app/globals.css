@@ -1162,7 +1162,7 @@ img {
   width: min(72%, 470px);
   height: auto;
   transform: translateX(50%);
-  opacity: 0.68;
+  opacity: 0.58;
   filter: invert(86%) sepia(92%) saturate(1554%) hue-rotate(157deg) brightness(103%) contrast(104%);
 }
 
