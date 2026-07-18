@@ -74,7 +74,7 @@ body::after {
   pointer-events: none;
 }
 
-html.maker-mode {
+html[data-theme="dark"].maker-mode {
   --cyan: #35e6ff;
   --cyan-soft: #a9f5ff;
   --yellow: #ffd540;
@@ -97,6 +97,17 @@ html.maker-mode .brand-mark {
 html.maker-mode .scan-line {
   background: var(--yellow);
   box-shadow: 0 0 16px var(--yellow);
+}
+
+html[data-theme="light"].maker-mode body::before {
+  background:
+    linear-gradient(rgba(141, 107, 41, 0.065) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(141, 107, 41, 0.065) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+html[data-theme="light"].maker-mode .brand-mark {
+  box-shadow: 0 0 18px rgba(141, 107, 41, 0.14);
 }
 
 ::selection {
