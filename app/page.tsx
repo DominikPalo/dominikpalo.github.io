@@ -190,9 +190,9 @@ const copy = {
       "Veľmi rád cestujem — najmä po Ázii, ktorú mám precestovanú takmer celú. Fascinujú ma rozdielne kultúry, jedlo, pulzujúce mestá aj miesta ďaleko od hlavných trás.",
     travelTags: ["Ázia", "Kultúry", "Jedlo", "Mimo hlavných trás"],
     contactKicker: "06 / SPOJME SA",
-    contactTitle: "Máte zaujímavý problém?",
+    contactTitle: "Ozvite sa mi.",
     contactBody:
-      "Najradšej riešim veci, pri ktorých treba spojiť viac technológií — alebo kód s kúskom hardvéru.",
+      "Ak máte otázku, nápad na spoluprácu alebo sa chcete porozprávať o technológiách či maker projektoch, napíšte mi.",
     contactFormLabel: "SPRÁVA / SECURE CHANNEL",
     contactFormEndpoint: "ENDPOINT: SÚKROMNÁ SCHRÁNKA",
     contactFormReady: "KANÁL PRIPRAVENÝ",
@@ -384,9 +384,9 @@ const copy = {
       "I love travelling, especially across Asia — a continent I have explored almost in its entirety. I’m drawn to its different cultures, food, restless cities, and places far beyond the main routes.",
     travelTags: ["Asia", "Cultures", "Food", "Beyond the main routes"],
     contactKicker: "06 / GET IN TOUCH",
-    contactTitle: "Got an interesting problem?",
+    contactTitle: "Let’s talk.",
     contactBody:
-      "I’m at my best when a problem connects several technologies — or code with a piece of hardware.",
+      "If you have a question, an idea for collaboration, or simply want to talk about technology or maker projects, send me a message.",
     contactFormLabel: "MESSAGE / SECURE CHANNEL",
     contactFormEndpoint: "ENDPOINT: PRIVATE INBOX",
     contactFormReady: "CHANNEL READY",
