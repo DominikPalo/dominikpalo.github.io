@@ -1,12 +1,32 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import type { PointerEvent as ReactPointerEvent } from "react";
 
 type Language = "sk" | "en";
 type Theme = "light" | "dark";
 type ThemeSource = "system" | "user" | null;
+type MakerWindowPosition = { x: number; y: number };
+type MakerWindowDrag = MakerWindowPosition & { pointerId: number };
 
 const THEME_STORAGE_KEY = "palo-theme";
+const MAKER_WINDOW_MARGIN = 8;
+
+const constrainMakerWindow = (
+  x: number,
+  y: number,
+  width: number,
+  height: number,
+): MakerWindowPosition => ({
+  x: Math.min(
+    Math.max(MAKER_WINDOW_MARGIN, x),
+    Math.max(MAKER_WINDOW_MARGIN, window.innerWidth - width - MAKER_WINDOW_MARGIN),
+  ),
+  y: Math.min(
+    Math.max(MAKER_WINDOW_MARGIN, y),
+    Math.max(MAKER_WINDOW_MARGIN, window.innerHeight - height - MAKER_WINDOW_MARGIN),
+  ),
+});
 
 const copy = {
   sk: {
@@ -190,6 +210,7 @@ const copy = {
     easterEgg: {
       title: "MAKER MODE ODOMKNUTÝ",
       close: "Zavrieť Maker Mode",
+      drag: "Potiahnutím presunúť okno",
       lines: [
         "SPÁJKOVAČKA: 350 °C",
         "VENTILÁCIA: ONLINE",
@@ -383,6 +404,7 @@ const copy = {
     easterEgg: {
       title: "MAKER MODE UNLOCKED",
       close: "Close Maker Mode",
+      drag: "Drag to move window",
       lines: [
         "SOLDERING IRON: 350 °C",
         "FUME EXTRACTION: ONLINE",
@@ -401,10 +423,14 @@ export default function Home() {
   const [language, setLanguage] = useState<Language>("sk");
   const [messageSent, setMessageSent] = useState(false);
   const [makerMode, setMakerMode] = useState(false);
+  const [makerPosition, setMakerPosition] = useState<MakerWindowPosition | null>(null);
+  const [makerDragging, setMakerDragging] = useState(false);
   const [theme, setTheme] = useState<Theme | null>(null);
   const [themeSource, setThemeSource] = useState<ThemeSource>(null);
   const brandTapCount = useRef(0);
   const lastBrandTap = useRef(0);
+  const makerWindowRef = useRef<HTMLElement | null>(null);
+  const makerWindowDrag = useRef<MakerWindowDrag | null>(null);
   const t = copy[language];
 
   useEffect(() => {
@@ -520,6 +546,38 @@ export default function Home() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [makerMode]);
 
+  useEffect(() => {
+    if (!makerMode) {
+      makerWindowDrag.current = null;
+      setMakerDragging(false);
+      return;
+    }
+
+    const keepMakerWindowVisible = () => {
+      const windowElement = makerWindowRef.current;
+
+      if (!windowElement) {
+        return;
+      }
+
+      const bounds = windowElement.getBoundingClientRect();
+      setMakerPosition((currentPosition) =>
+        currentPosition
+          ? constrainMakerWindow(
+              currentPosition.x,
+              currentPosition.y,
+              bounds.width,
+              bounds.height,
+            )
+          : currentPosition,
+      );
+    };
+
+    keepMakerWindowVisible();
+    window.addEventListener("resize", keepMakerWindowVisible);
+    return () => window.removeEventListener("resize", keepMakerWindowVisible);
+  }, [makerMode]);
+
   const handleBrandTap = () => {
     const now = Date.now();
 
@@ -542,6 +600,62 @@ export default function Home() {
 
     setThemeSource("user");
     setTheme(currentTheme === "dark" ? "light" : "dark");
+  };
+
+  const handleMakerDragStart = (event: ReactPointerEvent<HTMLDivElement>) => {
+    if (event.button !== 0 || (event.target as HTMLElement).closest("button")) {
+      return;
+    }
+
+    const windowElement = makerWindowRef.current;
+
+    if (!windowElement) {
+      return;
+    }
+
+    const bounds = windowElement.getBoundingClientRect();
+    makerWindowDrag.current = {
+      pointerId: event.pointerId,
+      x: event.clientX - bounds.left,
+      y: event.clientY - bounds.top,
+    };
+    setMakerPosition({ x: bounds.left, y: bounds.top });
+    setMakerDragging(true);
+    event.currentTarget.setPointerCapture(event.pointerId);
+    event.preventDefault();
+  };
+
+  const handleMakerDragMove = (event: ReactPointerEvent<HTMLDivElement>) => {
+    const drag = makerWindowDrag.current;
+    const windowElement = makerWindowRef.current;
+
+    if (!drag || drag.pointerId !== event.pointerId || !windowElement) {
+      return;
+    }
+
+    const bounds = windowElement.getBoundingClientRect();
+    setMakerPosition(
+      constrainMakerWindow(
+        event.clientX - drag.x,
+        event.clientY - drag.y,
+        bounds.width,
+        bounds.height,
+      ),
+    );
+    event.preventDefault();
+  };
+
+  const handleMakerDragEnd = (event: ReactPointerEvent<HTMLDivElement>) => {
+    if (makerWindowDrag.current?.pointerId !== event.pointerId) {
+      return;
+    }
+
+    makerWindowDrag.current = null;
+    setMakerDragging(false);
+
+    if (event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId);
+    }
   };
 
   const themeSwitchLabel =
@@ -1108,8 +1222,29 @@ export default function Home() {
       </footer>
 
       {makerMode && (
-        <aside className="maker-easter-egg" aria-live="polite">
-          <div className="easter-egg-header">
+        <aside
+          ref={makerWindowRef}
+          className={`maker-easter-egg${makerDragging ? " is-dragging" : ""}`}
+          aria-live="polite"
+          style={
+            makerPosition
+              ? {
+                  top: makerPosition.y,
+                  left: makerPosition.x,
+                  right: "auto",
+                  bottom: "auto",
+                }
+              : undefined
+          }
+        >
+          <div
+            className="easter-egg-header"
+            title={t.easterEgg.drag}
+            onPointerDown={handleMakerDragStart}
+            onPointerMove={handleMakerDragMove}
+            onPointerUp={handleMakerDragEnd}
+            onPointerCancel={handleMakerDragEnd}
+          >
             <span>DP://SECRET_WORKBENCH</span>
             <button
               type="button"

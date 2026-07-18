@@ -1642,8 +1642,19 @@ html[data-theme="light"] .contact-field textarea:focus-visible {
   border-bottom: 1px solid rgba(255, 213, 64, 0.3);
   padding-bottom: 10px;
   color: var(--yellow);
+  cursor: grab;
   font: 600 0.56rem var(--font-mono);
   letter-spacing: 0.1em;
+  touch-action: none;
+  user-select: none;
+}
+
+.maker-easter-egg.is-dragging {
+  animation: none;
+}
+
+.maker-easter-egg.is-dragging .easter-egg-header {
+  cursor: grabbing;
 }
 
 .easter-egg-header button {
