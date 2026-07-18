@@ -206,6 +206,7 @@ const copy = {
     contactSend: "Odoslať správu",
     contactSuccess: "Správa bola odoslaná. Ozvem sa čo najskôr.",
     footerNote: "Navrhnuté medzi kódom a cínom.",
+    footerTop: "HORE ↑",
     easterEgg: {
       title: "MAKER MODE ODOMKNUTÝ",
       close: "Zavrieť Maker Mode",
@@ -399,6 +400,7 @@ const copy = {
     contactSend: "Send message",
     contactSuccess: "Your message has been sent. I’ll get back to you soon.",
     footerNote: "Designed between code and solder.",
+    footerTop: "TOP ↑",
     easterEgg: {
       title: "MAKER MODE UNLOCKED",
       close: "Close Maker Mode",
@@ -1209,7 +1211,7 @@ export default function Home() {
           <div className="footer-bottom">
             <span>© {new Date().getFullYear()} Dominik Paľo</span>
             <span>{t.footerNote}</span>
-            <a href="#content">TOP ↑</a>
+            <a href="#content">{t.footerTop}</a>
           </div>
         </div>
       </footer>
