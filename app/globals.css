@@ -483,16 +483,6 @@ html[data-theme="dark"] .theme-icon-dark {
   filter: saturate(0.75) contrast(1.05);
 }
 
-.profile-index {
-  position: absolute;
-  right: 26px;
-  bottom: 16px;
-  z-index: 4;
-  color: var(--muted);
-  font: 650 0.72rem var(--font-mono);
-  letter-spacing: 0.08em;
-}
-
 .system-readouts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -53,7 +53,7 @@ const copy = {
     heroPrimary: "Pozrieť projekty",
     heroSecondary: "Otvoriť GitHub",
     portraitAlt: "Dominik Paľo",
-    systemLabel: "PROFIL / DP-01",
+    systemLabel: "PROFIL",
     systemSoftware: "SOFTWARE",
     systemHardware: "HARDWARE",
     systemCommunity: "COMMUNITY",
@@ -247,7 +247,7 @@ const copy = {
     heroPrimary: "Explore my work",
     heroSecondary: "Open GitHub",
     portraitAlt: "Dominik Paľo",
-    systemLabel: "PROFILE / DP-01",
+    systemLabel: "PROFILE",
     systemSoftware: "SOFTWARE",
     systemHardware: "HARDWARE",
     systemCommunity: "COMMUNITY",
@@ -779,7 +779,6 @@ export default function Home() {
               <div className="portrait-frame">
                 <img src="/dominik-palo-nerdy.png" alt={t.portraitAlt} />
               </div>
-              <div className="profile-index">DP—01</div>
             </div>
             <div className="system-readouts">
               <div>
