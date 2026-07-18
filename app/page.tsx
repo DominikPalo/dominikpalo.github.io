@@ -746,10 +746,9 @@ export default function Home() {
               <div className="ride-visual" aria-hidden="true">
                 <img
                   className="motorcycle-outline"
-                  src="/motorcycle-outline.webp"
+                  src="/motorcycle-outline-balanced.webp"
                   alt=""
                 />
-                <small>RIDE MODE / ON</small>
               </div>
               <div className="hobby-content">
                 <h3>{t.rideTitle}</h3>
