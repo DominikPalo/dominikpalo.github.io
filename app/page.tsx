@@ -769,12 +769,11 @@ export default function Home() {
                 <span>REGION: ASIA</span>
               </div>
               <div className="travel-visual" aria-hidden="true">
-                <div className="travel-route">
-                  <i />
-                  <i />
-                  <i />
-                  <i />
-                </div>
+                <img className="asia-map-outline" src="/asia-outline.png" alt="" />
+                <span className="map-connection" />
+                <i className="map-pin map-pin-west" />
+                <i className="map-pin map-pin-central" />
+                <i className="map-pin map-pin-east" />
                 <div className="passport-stamp">
                   <strong>ASIA</strong>
                   <small>EXPLORED</small>

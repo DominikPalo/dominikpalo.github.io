@@ -1252,31 +1252,54 @@ img {
   letter-spacing: 0.14em;
 }
 
-.travel-route {
+.asia-map-outline {
   position: absolute;
-  top: 42px;
-  bottom: 38px;
-  left: 54px;
-  width: 190px;
-  border-top: 1px solid var(--cyan);
-  border-right: 1px solid var(--cyan);
-  border-bottom: 1px solid var(--cyan);
-  clip-path: polygon(0 0, 100% 0, 100% 38%, 68% 38%, 68% 72%, 100% 72%, 100% 100%, 0 100%);
+  top: -52px;
+  left: 24px;
+  width: min(64%, 350px);
+  opacity: 0.58;
+  filter: invert(86%) sepia(92%) saturate(1554%) hue-rotate(157deg) brightness(103%) contrast(104%);
 }
 
-.travel-route i {
+.map-connection {
   position: absolute;
-  width: 8px;
-  height: 8px;
+  top: 86px;
+  left: 142px;
+  width: 154px;
+  height: 48px;
+  transform: rotate(-8deg);
+  border-top: 1px dashed rgba(255, 213, 64, 0.72);
+  border-radius: 50%;
+}
+
+.map-pin {
+  position: absolute;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: var(--cyan);
+  color: var(--cyan);
   box-shadow: 0 0 0 4px rgba(53, 230, 255, 0.12);
 }
 
-.travel-route i:nth-child(1) { top: -4px; left: 0; }
-.travel-route i:nth-child(2) { top: 34%; right: -4px; }
-.travel-route i:nth-child(3) { right: -4px; bottom: 27%; background: var(--yellow); }
-.travel-route i:nth-child(4) { bottom: -4px; left: 0; }
+.map-pin::after {
+  position: absolute;
+  inset: -7px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  content: "";
+  opacity: 0.35;
+}
+
+.map-pin-west { top: 112px; left: 116px; }
+.map-pin-central { top: 76px; left: 208px; }
+.map-pin-east {
+  top: 96px;
+  left: 293px;
+  color: var(--yellow);
+  background: var(--yellow);
+  box-shadow: 0 0 0 4px rgba(255, 213, 64, 0.12);
+}
 
 .travel-coordinate {
   position: absolute;
@@ -1755,10 +1778,21 @@ img {
     font-size: clamp(2.3rem, 14vw, 3.8rem);
   }
 
-  .travel-route {
-    left: 24px;
-    width: 140px;
+  .asia-map-outline {
+    top: -28px;
+    left: 12px;
+    width: 240px;
   }
+
+  .map-connection {
+    top: 88px;
+    left: 88px;
+    width: 130px;
+  }
+
+  .map-pin-west { left: 68px; }
+  .map-pin-central { left: 144px; }
+  .map-pin-east { left: 214px; }
 
   .passport-stamp {
     right: 20px;
