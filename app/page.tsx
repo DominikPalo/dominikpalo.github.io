@@ -368,7 +368,7 @@ const copy = {
         href: "https://www.fei.stuba.sk",
       },
     ],
-    communityKicker: "04 / COMMUNITY MODE",
+    communityKicker: "04 / COMMUNITY",
     communityTitle: "Technology matters when it is shared.",
     communityBody:
       "In my free time, I’m active at MakerSpace Bratislava — a community workshop at Nová Cvernovka. I volunteer to help run the space, support people with electronics and maker projects, teach, and lead hands-on courses.",
