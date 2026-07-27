@@ -167,12 +167,17 @@ const copy = {
     communityTitle: "Technológia má zmysel, keď sa zdieľa.",
     communityBody:
       "Vo voľnom čase pôsobím v MakerSpace Bratislava — komunitnej dielni v Novej Cvernovke. Dobrovoľníčim pri jej fungovaní, pomáham ľuďom s elektronikou a maker projektmi, lektorujem a vediem praktické kurzy.",
+    communityCourseLabel: "MÔJ KURZ V MSBA",
+    communityCourseTitle: "Základy elektroniky",
+    communityCourseBody:
+      "Vediem 8-hodinový kurz pre úplných začiatočníkov, ktorý prepája teóriu s praxou — od čítania schém a merania multimetrom až po bezpečné spájkovanie a základné elektronické obvody.",
+    communityCourseCta: "Viac o kurze",
     communityCta: "Navštíviť MakerSpace Bratislava",
     communityConsole: "MAKERSPACE BRATISLAVA",
     communityRoles: [
       ["DOBROVOĽNÍK", "Pomoc komunite a dielni"],
       ["LEKTOR", "Zdieľanie elektronického know-how"],
-      ["VEDENIE KURZOV", "Praktické kurzy od nápadu k výrobku"],
+      ["VEDENIE KURZOV", "Základy elektroniky a spájkovania"],
     ],
     hobbiesKicker: "05 / VOĽNÝ ČAS",
     hobbiesTitle: "Keď nie som za počítačom, som na cestách.",
@@ -360,12 +365,17 @@ const copy = {
     communityTitle: "Technology matters when it is shared.",
     communityBody:
       "In my free time, I’m active at MakerSpace Bratislava — a community workshop at Nová Cvernovka. I volunteer to help run the space, support people with electronics and maker projects, teach, and lead hands-on courses.",
+    communityCourseLabel: "MY COURSE AT MSBA",
+    communityCourseTitle: "Electronics fundamentals",
+    communityCourseBody:
+      "I lead an eight-hour course for complete beginners that combines theory with hands-on practice — from reading schematics and using a multimeter to safe soldering and basic electronic circuits.",
+    communityCourseCta: "View course details",
     communityCta: "Visit MakerSpace Bratislava",
     communityConsole: "MAKERSPACE BRATISLAVA",
     communityRoles: [
       ["VOLUNTEER", "Helping the community and workshop"],
       ["LECTURER", "Sharing electronics know-how"],
-      ["COURSE LEAD", "Hands-on courses from idea to object"],
+      ["COURSE LEAD", "Electronics and soldering fundamentals"],
     ],
     hobbiesKicker: "05 / FREE TIME",
     hobbiesTitle: "When I’m away from the computer, I’m on the road.",
@@ -970,6 +980,18 @@ export default function Home() {
               <p className="section-kicker">{t.communityKicker}</p>
               <h2 id="community-title">{t.communityTitle}</h2>
               <p>{t.communityBody}</p>
+              <div className="community-course">
+                <span>{t.communityCourseLabel}</span>
+                <h3>{t.communityCourseTitle}</h3>
+                <p>{t.communityCourseBody}</p>
+                <a
+                  href="https://msba.sk/elektro-dielna/zaklady-elektroniky/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t.communityCourseCta} <span aria-hidden="true">↗</span>
+                </a>
+              </div>
               <a
                 className="button button-light"
                 href="https://www.msba.sk"
