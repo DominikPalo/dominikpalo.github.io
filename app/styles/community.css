@@ -1,0 +1,184 @@
+.community-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.community-shell {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.012);
+  color: var(--white);
+}
+
+.community-copy {
+  padding: clamp(42px, 6vw, 84px);
+}
+
+.community-copy .section-kicker {
+  margin-top: 0;
+  color: var(--cyan);
+}
+
+.community-copy > p {
+  color: var(--muted);
+}
+
+.community-course-feature {
+  border: 1px solid var(--line);
+  border-top: 0;
+  background: rgba(255, 255, 255, 0.012);
+}
+
+.community-course-feature--upcoming {
+  background:
+    linear-gradient(90deg, rgba(54, 213, 238, 0.035), transparent 42%),
+    rgba(255, 255, 255, 0.012);
+}
+
+.community-course-overview {
+  padding: clamp(36px, 5vw, 68px);
+}
+
+.community-course-label {
+  color: var(--cyan);
+  font: 650 0.58rem var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.community-course-overview h3 {
+  margin: 16px 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.75rem);
+  letter-spacing: -0.02em;
+}
+
+.community-course-overview > p {
+  max-width: 900px;
+  margin: 20px 0 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.community-course-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 900px;
+  margin-top: 30px;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.community-course-facts div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 5px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 16px;
+}
+
+.community-course-facts strong {
+  color: var(--white);
+  font: 650 0.66rem var(--font-mono);
+  letter-spacing: 0.05em;
+}
+
+.community-course-facts span,
+.community-course-audience {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.community-course-audience {
+  max-width: 900px;
+}
+
+.community-course-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  color: var(--cyan-soft);
+  font: 650 0.62rem var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.community-course-status span {
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(54, 213, 238, 0.08);
+}
+
+.community-course-overview .button {
+  width: fit-content;
+  margin-top: 28px;
+}
+
+.button-light {
+  width: fit-content;
+  margin-top: 34px;
+  border-color: var(--line-strong);
+  background: var(--cyan);
+  color: var(--navy-950);
+}
+
+.button-light:hover,
+.button-light:focus-visible {
+  background: var(--white);
+  color: var(--navy-950);
+}
+
+.community-console {
+  margin: 0;
+  border-left: 1px solid var(--line);
+  background: var(--navy-950);
+  color: var(--white);
+  padding: clamp(24px, 4vw, 48px);
+}
+
+.console-header {
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.role-row {
+  display: grid;
+  grid-template-columns: 38px 0.55fr 1fr 12px;
+  gap: 16px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding: 24px 0;
+}
+
+.role-index {
+  color: var(--cyan);
+  font: 500 0.58rem var(--font-mono);
+}
+
+.role-row strong {
+  color: var(--white);
+  font: 650 0.68rem var(--font-mono);
+  letter-spacing: 0.06em;
+}
+
+.role-row > span:nth-child(3) {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.role-row i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cyan);
+}
+
+.console-footer {
+  margin-top: 110px;
+}

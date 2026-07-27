@@ -1,0 +1,229 @@
+export const en = {
+    nav: {
+      about: "About",
+      work: "Work",
+      experience: "Experience",
+      community: "Community",
+      hobbies: "Free time",
+      contact: "Contact",
+    },
+    skip: "Skip to content",
+    languageLabel: "Switch language to Slovak",
+    themeSwitch: "Change color mode",
+    themeSwitchToLight: "Switch to light mode",
+    themeSwitchToDark: "Switch to dark mode",
+    location: "Bratislava / Slovakia",
+    eyebrow: "SOFTWARE ENGINEER × MAKER",
+    heroTitleTop: "I build software",
+    heroTitleBottom: "that reaches beyond the screen.",
+    heroLead:
+      "By day, I build native applications and integrations at Slido. By night, I design circuit boards, program microcontrollers, and bring my own designs to life — from 3D model to final print.",
+    heroPrimary: "Explore my work",
+    heroSecondary: "Open GitHub",
+    portraitAlt: "Dominik Paľo",
+    systemLabel: "PROFILE",
+    systemSoftware: "SOFTWARE",
+    systemHardware: "HARDWARE",
+    systemCommunity: "COMMUNITY",
+    systemSoftwareValue: "Swift · C# · TypeScript",
+    systemHardwareValue: "PCB · IoT · 3D CAD",
+    systemCommunityValue: "Mentoring · Courses",
+    metrics: [
+      { value: "2014 → NOW", label: "Slido / Cisco" },
+      { value: "macOS + Windows", label: "Native development" },
+      { value: "96", label: "Public repositories" },
+      { value: "MakerSpace", label: "Lecturer & volunteer" },
+    ],
+    aboutKicker: "01 / ABOUT",
+    aboutTitle: "Between code and a soldering iron.",
+    aboutIntro:
+      "I’m a senior software engineer based in Bratislava. I enjoy solving problems where different worlds meet — the web with native apps, software with hardware, and technology with people.",
+    softwareTitle: "SOFTWARE ENGINEER",
+    softwareBody:
+      "At Slido, part of Cisco, I build PowerPoint integrations for macOS and Windows. My main stack includes Swift, C, C++, and VBA; I also contribute to the .NET/C# and React/TypeScript parts of the product.",
+    makerTitle: "MAKER & MENTOR",
+    makerBody:
+      "I design PCBs and program ESP32, STM32, and AVR microcontrollers. I’m experienced in 3D modelling and especially enjoy designing functional parts and models for 3D printing in Autodesk Fusion. At MakerSpace Bratislava, I volunteer, share knowledge as a lecturer, and lead hands-on courses.",
+    stackLabel: "TECHNOLOGIES & TOOLS",
+    stack: ["Swift", "C#", "TypeScript", "React", "Node.js", "C / C++", "ESP32", "KiCad", "Autodesk Fusion", "3D printing"],
+    workKicker: "02 / SELECTED WORK",
+    workTitle: "Things that work in the real world.",
+    workIntro:
+      "From presentation integrations used by global teams to open-source hardware on my workbench.",
+    projectVisit: "Open project",
+    projects: [
+      {
+        index: "01",
+        title: "Slido for PowerPoint",
+        type: "NATIVE INTEGRATION",
+        description:
+          "Polls, quizzes, and Q&A directly in PowerPoint. I’m primarily responsible for the macOS integration and also contribute to its Windows and web layers.",
+        tags: ["Swift", "C#", "C/C++", "VBA", "React"],
+        href: "https://www.slido.com/features-powerpoint",
+        image: "/projects/slido-powerpoint.jpg",
+        featured: true,
+      },
+      {
+        index: "02",
+        title: "Slido for Google Slides",
+        type: "WEB ECOSYSTEM",
+        description:
+          "A Chrome extension, Google Slides add-on, web player, and Slido Sidebar connected into one presentation experience.",
+        tags: ["TypeScript", "React", "Google Cloud"],
+        href: "https://www.slido.com/features-google-slides",
+        image: "/projects/slido-google-slides.jpg",
+      },
+      {
+        index: "03",
+        title: "Slido Switcher",
+        type: "NATIVE DESKTOP / 2017—2025",
+        description:
+          "Eight years of building macOS and Windows apps that let presenters control their computer directly from Slido.",
+        tags: ["Swift", "C#", "WPF"],
+        href: "https://community.slido.com/news-announcements-3/slido-s-switcher-app-was-sunsetted-in-january-2025-4416",
+        image: "/projects/slido-switcher.png",
+      },
+      {
+        index: "04",
+        title: "Slido for Slack",
+        type: "PRODUCT INTEGRATION / 2018—2020",
+        description:
+          "Backend, database, and interaction logic for an integration that brought Slido event management and audience questions into Slack.",
+        tags: ["Node.js", "TypeScript", "MySQL", "Slack API"],
+        href: "https://www.producthunt.com/products/slido",
+        image: "/projects/slido-slack.png",
+      },
+      {
+        index: "05",
+        title: "Arduino Smart Home",
+        type: "DEAN'S AWARD / 2013",
+        description:
+          "Master’s thesis: a mobile app, server, and Arduino hardware for home control and automation — before the IoT boom.",
+        tags: ["Arduino", "Cordova", "Node.js", "CouchDB"],
+        href: "https://www.linkedin.com/in/dpalo",
+        image: "/projects/arduino-thesis.png",
+      },
+    ],
+    experienceKicker: "03 / EXPERIENCE",
+    experienceTitle: "Technology changes. Curiosity stays.",
+    experience: [
+      {
+        years: "2014 — NOW",
+        role: "Senior Software Engineer",
+        company: "Slido / Cisco",
+        detail:
+          "Native macOS and Windows applications, web technologies, and integrations with presentation platforms.",
+        href: "https://www.slido.com",
+      },
+      {
+        years: "2012 — 2016",
+        role: "Software & Hardware Engineer",
+        company: "Matsuko",
+        detail:
+          "Cross-platform mobile apps in Xamarin/C# and custom devices: PCB design, AVR firmware, and software integration.",
+        href: "https://www.matsuko.com",
+      },
+      {
+        years: "2008 — 2013",
+        role: "Applied Informatics",
+        company: "FEI STU",
+        detail:
+          "Engineering degree focused on modelling and simulation of event systems. Active member of the Ynet association.",
+        href: "https://www.fei.stuba.sk",
+      },
+    ],
+    communityKicker: "04 / COMMUNITY",
+    communityTitle: "Technology matters when it is shared.",
+    communityBody:
+      "In my free time, I’m active at MakerSpace Bratislava — a community workshop at Nová Cvernovka. I volunteer to help run the space, support people with electronics and maker projects, teach, lead hands-on courses, and help with the children’s Electronics Club. I’m also preparing a course on 3D modelling for printing.",
+    communityCourseLabel: "MY COURSE AT MSBA",
+    communityCourseTitle: "Electronics fundamentals",
+    communityCourseBody:
+      "A full-day course for complete beginners who want to understand electrical circuits and gain confidence working safely with components, measurements, and soldering. The content is organised into four parts — concepts, equipment, components, and soldering — with hands-on experiments throughout.",
+    communityCourseFacts: [
+      ["8 HOURS", "theory + practical exercises"],
+      ["BEGINNER FRIENDLY", "no previous experience needed"],
+      ["SMALL GROUP", "individual guidance"],
+    ],
+    communityCourseAudience:
+      "The course is designed for beginners, hobbyists, DIY makers, and students. All tools and materials are provided on site; bringing your own laptop is recommended.",
+    communityCourseCta: "View course details",
+    communityKidsLabel: "I HELP TEACH",
+    communityKidsTitle: "Electronics club for children",
+    communityKidsBody:
+      "A regular club that makes electronics approachable and practical for children. They progress from the fundamentals of electricity and simple circuits to programmable projects with Arduino.",
+    communityKidsFacts: [
+      ["AGES 8–15", "for curious children and young makers"],
+      ["WEDNESDAYS", "regular two-hour sessions"],
+      ["MAX. 8 CHILDREN", "individual guidance and personal projects"],
+    ],
+    communityKidsAudience:
+      "Children build breadboard circuits with LEDs, sensors, and motors, program Arduino, and create their own projects — such as a blinker, thermometer, doorbell, or small robot. Materials are provided.",
+    communityKidsCta: "View club details",
+    communityModellingLabel: "UPCOMING COURSE",
+    communityModellingTitle: "3D modelling for printing",
+    communityModellingBody:
+      "A weekly course for adults focused on creating functional 3D models in Autodesk Fusion. Participants will learn how to turn an idea into a considered digital design that can be produced reliably with 3D printing.",
+    communityModellingFacts: [
+      ["FOR ADULTS", "practical and approachable"],
+      ["WEEKLY", "regular sessions"],
+      ["AUTODESK FUSION", "the course’s primary tool"],
+    ],
+    communityModellingAudience:
+      "The course will cover the complete process — from creating a parametric model and choosing the right dimensions, tolerances, and design principles to checking geometry, orienting the part, and exporting it for further preparation and printing.",
+    communityModellingStatus: "More information coming soon",
+    communityCta: "Visit MakerSpace Bratislava",
+    communityConsole: "MAKERSPACE BRATISLAVA",
+    communityRoles: [
+      ["VOLUNTEER", "Helping the community and workshop"],
+      ["LECTURER", "Electronics courses and children’s club"],
+      ["COURSE LEAD", "Electronics and 3D modelling"],
+    ],
+    hobbiesKicker: "05 / FREE TIME",
+    hobbiesTitle: "When I’m away from the computer, I’m on the road.",
+    hobbiesIntro:
+      "Technology is a big part of my world, but the best experiences often begin away from a screen.",
+    rideLabel: "MOTORCYCLING",
+    rideTitle: "Honda NC750X",
+    rideBody:
+      "Riding clears my head, changes my perspective, and turns the road itself into the destination. My Honda NC750X is my favourite way to set off without a fixed plan.",
+    rideTags: ["Two wheels", "Open road", "No fixed plan"],
+    travelLabel: "TRAVEL",
+    travelTitle: "Almost all of Asia",
+    travelBody:
+      "I love travelling, especially across Asia — a continent I have explored almost in its entirety. I’m drawn to its different cultures, food, restless cities, and places far beyond the main routes.",
+    travelTags: ["Asia", "Cultures", "Food", "Beyond the main routes"],
+    contactKicker: "06 / GET IN TOUCH",
+    contactTitle: "Let’s talk.",
+    contactBody:
+      "If you have a question, an idea for collaboration, or simply want to talk about technology or maker projects, send me a message.",
+    contactFormLabel: "CONTACT",
+    contactFormEndpoint: "Contact form",
+    contactName: "Name",
+    contactNamePlaceholder: "What should I call you?",
+    contactEmail: "Email",
+    contactEmailPlaceholder: "you@email.com",
+    contactSubject: "Subject",
+    contactSubjectPlaceholder: "What would you like to discuss?",
+    contactMessage: "Message",
+    contactMessagePlaceholder: "Tell me more about what you have in mind...",
+    contactSend: "Send message",
+    contactSuccess: "Your message has been sent. I’ll get back to you soon.",
+    footerNote: "Designed between code and solder.",
+    footerTop: "TOP ↑",
+    easterEgg: {
+      title: "MAKER MODE UNLOCKED",
+      close: "Close Maker Mode",
+      drag: "Drag to move window",
+      lines: [
+        "SOLDERING IRON: 350 °C",
+        "FUME EXTRACTION: ONLINE",
+        "LAST SCREW: STILL MISSING",
+      ],
+    },
+    links: {
+      github: "GitHub",
+      linkedin: "LinkedIn",
+      instagram: "Instagram",
+    },
+  } as const;

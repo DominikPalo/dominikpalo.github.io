@@ -1,0 +1,83 @@
+html[data-theme="light"] body::before {
+  background: linear-gradient(180deg, rgba(23, 33, 38, 0.02), transparent 34%);
+}
+
+html[data-theme="light"] body::after {
+  background: radial-gradient(circle at 78% 8%, rgba(44, 112, 121, 0.07), transparent 30%);
+}
+
+html[data-theme="light"] .site-header {
+  background: rgba(245, 247, 246, 0.9);
+}
+
+html[data-theme="light"] .brand-mark,
+html[data-theme="light"] .metric,
+html[data-theme="light"] .identity-panel,
+html[data-theme="light"] .maker-panel,
+html[data-theme="light"] .community-shell,
+html[data-theme="light"] .community-course-feature {
+  background: rgba(255, 255, 255, 0.56);
+}
+
+html[data-theme="light"] .community-course-feature--upcoming {
+  background:
+    linear-gradient(90deg, rgba(44, 112, 121, 0.045), transparent 42%),
+    rgba(255, 255, 255, 0.56);
+}
+
+html[data-theme="light"] .hero {
+  background:
+    linear-gradient(rgba(37, 60, 67, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 60, 67, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+html[data-theme="light"] .profile-system {
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 22px 70px rgba(37, 60, 67, 0.11);
+}
+
+html[data-theme="light"] .work-section,
+html[data-theme="light"] .hobbies-section {
+  background: rgba(230, 235, 234, 0.5);
+}
+
+html[data-theme="light"] .project-card,
+html[data-theme="light"] .hobby-card,
+html[data-theme="light"] .contact-channel {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+html[data-theme="light"] .project-open {
+  background: rgba(245, 247, 246, 0.9);
+  color: var(--white);
+}
+
+html[data-theme="light"] .ride-visual,
+html[data-theme="light"] .travel-visual {
+  background:
+    linear-gradient(rgba(37, 60, 67, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(37, 60, 67, 0.035) 1px, transparent 1px),
+    var(--navy-950);
+}
+
+html[data-theme="light"] .motorcycle-outline,
+html[data-theme="light"] .asia-map-outline {
+  opacity: 0.48;
+  filter: invert(38%) sepia(20%) saturate(890%) hue-rotate(139deg) brightness(90%) contrast(88%);
+}
+
+html[data-theme="light"] .contact-field input,
+html[data-theme="light"] .contact-field textarea {
+  background: rgba(230, 235, 234, 0.58);
+}
+
+html[data-theme="light"] .contact-field input::placeholder,
+html[data-theme="light"] .contact-field textarea::placeholder {
+  color: rgba(70, 86, 92, 0.65);
+}
+
+html[data-theme="light"] .contact-field input:focus-visible,
+html[data-theme="light"] .contact-field textarea:focus-visible {
+  background: rgba(255, 255, 255, 0.88);
+}

@@ -1,0 +1,229 @@
+export const sk = {
+    nav: {
+      about: "O mne",
+      work: "Projekty",
+      experience: "Skúsenosti",
+      community: "Komunita",
+      hobbies: "Voľný čas",
+      contact: "Kontakt",
+    },
+    skip: "Preskočiť na obsah",
+    languageLabel: "Zmeniť jazyk na angličtinu",
+    themeSwitch: "Zmeniť farebný režim",
+    themeSwitchToLight: "Prepnúť na svetlý režim",
+    themeSwitchToDark: "Prepnúť na tmavý režim",
+    location: "Bratislava / Slovensko",
+    eyebrow: "SOFTVÉROVÝ INŽINIER × MAKER",
+    heroTitleTop: "Tvorím softvér,",
+    heroTitleBottom: "ktorý siaha za obrazovku.",
+    heroLead:
+      "Cez deň vyvíjam natívne aplikácie a integrácie v Slido. Po večeroch navrhujem dosky, programujem mikrokontroléry a realizujem vlastné návrhy — od 3D modelu až po samotnú tlač.",
+    heroPrimary: "Pozrieť projekty",
+    heroSecondary: "Otvoriť GitHub",
+    portraitAlt: "Dominik Paľo",
+    systemLabel: "PROFIL",
+    systemSoftware: "SOFTWARE",
+    systemHardware: "HARDWARE",
+    systemCommunity: "COMMUNITY",
+    systemSoftwareValue: "Swift · C# · TypeScript",
+    systemHardwareValue: "PCB · IoT · 3D CAD",
+    systemCommunityValue: "Mentoring · Kurzy",
+    metrics: [
+      { value: "2014 → DNES", label: "Slido / Cisco" },
+      { value: "macOS + Windows", label: "Natívny vývoj" },
+      { value: "96", label: "Verejných repozitárov" },
+      { value: "MakerSpace", label: "Lektor & dobrovoľník" },
+    ],
+    aboutKicker: "01 / O MNE",
+    aboutTitle: "Medzi kódom a spájkovačkou.",
+    aboutIntro:
+      "Som senior softvérový inžinier z Bratislavy. Baví ma riešiť problémy tam, kde sa stretáva viac svetov — web s natívnou aplikáciou, softvér s hardvérom a technológia s človekom.",
+    softwareTitle: "SOFTWARE ENGINEER",
+    softwareBody:
+      "V Slido, ktoré je súčasťou Cisco, tvorím integrácie pre PowerPoint na macOS aj Windows. Primárne pracujem so Swiftom, C, C++ a VBA; prispievam aj do .NET/C# a React/TypeScript častí produktu.",
+    makerTitle: "MAKER & MENTOR",
+    makerBody:
+      "Navrhujem PCB a programujem mikrokontroléry ESP32, STM32 či AVR. Mám skúsenosti s 3D modelovaním a obzvlášť ma baví navrhovať funkčné diely a modely pre 3D tlač v Autodesk Fusion. V MakerSpace Bratislava dobrovoľníčim, odovzdávam skúsenosti ako lektor a vediem praktické kurzy.",
+    stackLabel: "TECHNOLÓGIE A NÁSTROJE",
+    stack: ["Swift", "C#", "TypeScript", "React", "Node.js", "C / C++", "ESP32", "KiCad", "Autodesk Fusion", "3D tlač"],
+    workKicker: "02 / VYBRANÉ PROJEKTY",
+    workTitle: "Veci, ktoré fungujú v reálnom svete.",
+    workIntro:
+      "Od prezentačných integrácií používaných globálnymi tímami po open-source hardvér na pracovnom stole.",
+    projectVisit: "Otvoriť projekt",
+    projects: [
+      {
+        index: "01",
+        title: "Slido for PowerPoint",
+        type: "NATIVE INTEGRATION",
+        description:
+          "Ankety, kvízy a Q&A priamo v PowerPointe. Primárne zodpovedám za integráciu pre macOS a prispievam aj do Windows a webovej vrstvy.",
+        tags: ["Swift", "C#", "C/C++", "VBA", "React"],
+        href: "https://www.slido.com/features-powerpoint",
+        image: "/projects/slido-powerpoint.jpg",
+        featured: true,
+      },
+      {
+        index: "02",
+        title: "Slido for Google Slides",
+        type: "WEB ECOSYSTEM",
+        description:
+          "Prepojenie Chrome rozšírenia, Google Slides doplnku, webového prehrávača a Slido Sidebar do jedného prezentačného zážitku.",
+        tags: ["TypeScript", "React", "Google Cloud"],
+        href: "https://www.slido.com/features-google-slides",
+        image: "/projects/slido-google-slides.jpg",
+      },
+      {
+        index: "03",
+        title: "Slido Switcher",
+        type: "NATIVE DESKTOP / 2017—2025",
+        description:
+          "Osem rokov vývoja macOS a Windows aplikácií, ktoré umožňovali moderátorom ovládať prezentáciu priamo zo Slida.",
+        tags: ["Swift", "C#", "WPF"],
+        href: "https://community.slido.com/news-announcements-3/slido-s-switcher-app-was-sunsetted-in-january-2025-4416",
+        image: "/projects/slido-switcher.png",
+      },
+      {
+        index: "04",
+        title: "Slido for Slack",
+        type: "PRODUCT INTEGRATION / 2018—2020",
+        description:
+          "Backend, databáza a interakčná logika integrácie, ktorá priniesla správu Slido eventov a otázok priamo do Slacku.",
+        tags: ["Node.js", "TypeScript", "MySQL", "Slack API"],
+        href: "https://www.producthunt.com/products/slido",
+        image: "/projects/slido-slack.png",
+      },
+      {
+        index: "05",
+        title: "Arduino Smart Home",
+        type: "DEAN'S AWARD / 2013",
+        description:
+          "Diplomová práca: mobilná aplikácia, server a Arduino hardvér pre ovládanie a automatizáciu domácnosti — ešte pred IoT boomom.",
+        tags: ["Arduino", "Cordova", "Node.js", "CouchDB"],
+        href: "https://www.linkedin.com/in/dpalo",
+        image: "/projects/arduino-thesis.png",
+      },
+    ],
+    experienceKicker: "03 / SKÚSENOSTI",
+    experienceTitle: "Technológie sa menia. Zvedavosť zostáva.",
+    experience: [
+      {
+        years: "2014 — DNES",
+        role: "Senior Software Engineer",
+        company: "Slido / Cisco",
+        detail:
+          "Natívne aplikácie a integrácie pre macOS a Windows, webové technológie a prepojenia s prezentačnými platformami.",
+        href: "https://www.slido.com",
+      },
+      {
+        years: "2012 — 2016",
+        role: "Software & Hardware Engineer",
+        company: "Matsuko",
+        detail:
+          "Multiplatformové mobilné aplikácie v Xamarin/C# a zariadenia na mieru: návrh PCB, AVR firmware a integrácia so softvérom.",
+        href: "https://www.matsuko.com",
+      },
+      {
+        years: "2008 — 2013",
+        role: "Aplikovaná informatika",
+        company: "FEI STU",
+        detail:
+          "Inžinierske štúdium so špecializáciou na modelovanie a simuláciu udalostných systémov. Aktívny člen združenia Ynet.",
+        href: "https://www.fei.stuba.sk",
+      },
+    ],
+    communityKicker: "04 / KOMUNITA",
+    communityTitle: "Technológia má zmysel, keď sa zdieľa.",
+    communityBody:
+      "Vo voľnom čase pôsobím v MakerSpace Bratislava — komunitnej dielni v Novej Cvernovke. Dobrovoľníčim pri jej fungovaní, pomáham ľuďom s elektronikou a maker projektmi, lektorujem, vediem praktické kurzy a pomáham pri Elektro krúžku pre deti. Pripravujem tiež kurz 3D modelovania pre tlač.",
+    communityCourseLabel: "MÔJ KURZ V MSBA",
+    communityCourseTitle: "Základy elektroniky",
+    communityCourseBody:
+      "Celodenný kurz pre úplných začiatočníkov, ktorí chcú porozumieť elektrickým obvodom a získať istotu pri bezpečnej práci s komponentmi, meraním a spájkovaním. Obsah je rozdelený do štyroch blokov — pojmy, vybavenie, komponenty a spájkovanie — a výklad dopĺňajú praktické experimenty.",
+    communityCourseFacts: [
+      ["8 HODÍN", "teória + praktické cvičenia"],
+      ["PRE ZAČIATOČNÍKOV", "bez predchádzajúcich skúseností"],
+      ["MALÁ SKUPINA", "individuálny prístup"],
+    ],
+    communityCourseAudience:
+      "Kurz je vhodný pre začiatočníkov, hobby nadšencov, DIY makerov a študentov. Všetko náradie a pomôcky sú pripravené na mieste; odporúčaný je vlastný notebook.",
+    communityCourseCta: "Viac o kurze",
+    communityKidsLabel: "POMÁHAM LEKTOROVAŤ",
+    communityKidsTitle: "Elektro krúžok pre deti",
+    communityKidsBody:
+      "Pravidelný krúžok približuje deťom elektroniku zrozumiteľne a prakticky. Od základov elektriny a jednoduchých obvodov postupne prechádzajú k programovateľným projektom s Arduinom.",
+    communityKidsFacts: [
+      ["8–15 ROKOV", "pre zvedavé deti a mladých makerov"],
+      ["STREDY", "pravidelné dvojhodinové stretnutia"],
+      ["MAX. 8 DETÍ", "vlastný projekt a individuálny prístup"],
+    ],
+    communityKidsAudience:
+      "Deti skladajú obvody na breadboarde s LED diódami, senzormi a motormi, programujú Arduino a vytvárajú vlastné projekty — napríklad blikač, teplomer, zvonček alebo malého robota. Materiál je zabezpečený.",
+    communityKidsCta: "Viac o krúžku",
+    communityModellingLabel: "PRIPRAVOVANÝ KURZ",
+    communityModellingTitle: "Modelovanie pre 3D tlač",
+    communityModellingBody:
+      "Týždenný kurz pre dospelých zameraný na tvorbu funkčných 3D modelov v Autodesk Fusion. Účastníci sa naučia pretaviť vlastný nápad do premysleného digitálneho návrhu, ktorý je možné spoľahlivo vyrobiť pomocou 3D tlače.",
+    communityModellingFacts: [
+      ["PRE DOSPELÝCH", "prakticky a zrozumiteľne"],
+      ["KAŽDÝ TÝŽDEŇ", "pravidelné stretnutia"],
+      ["AUTODESK FUSION", "hlavný nástroj kurzu"],
+    ],
+    communityModellingAudience:
+      "Kurz prevedie účastníkov celým procesom — od vytvorenia parametrického modelu cez správne rozmery, tolerancie a konštrukčné zásady až po kontrolu geometrie, orientáciu a export modelu na ďalšie spracovanie a tlač.",
+    communityModellingStatus: "Viac informácií už čoskoro",
+    communityCta: "Navštíviť MakerSpace Bratislava",
+    communityConsole: "MAKERSPACE BRATISLAVA",
+    communityRoles: [
+      ["DOBROVOĽNÍK", "Pomoc komunite a dielni"],
+      ["LEKTOR", "Elektro kurzy a krúžok pre deti"],
+      ["VEDENIE KURZOV", "Elektronika a 3D modelovanie"],
+    ],
+    hobbiesKicker: "05 / VOĽNÝ ČAS",
+    hobbiesTitle: "Keď nie som za počítačom, som na cestách.",
+    hobbiesIntro:
+      "Technológie sú veľká časť môjho sveta, ale tie najlepšie zážitky často začínajú mimo obrazovky.",
+    rideLabel: "MOTORKA",
+    rideTitle: "Honda NC750X",
+    rideBody:
+      "Jazda na motorke je pre mňa spôsob, ako vyčistiť hlavu, zmeniť perspektívu a objavovať cestu bez pevného plánu. Najradšej zo sedla vlastnej Hondy NC750X.",
+    rideTags: ["Dve kolesá", "Otvorená cesta", "Bez pevného plánu"],
+    travelLabel: "CESTOVANIE",
+    travelTitle: "Takmer celá Ázia",
+    travelBody:
+      "Veľmi rád cestujem — najmä po Ázii, ktorú mám precestovanú takmer celú. Fascinujú ma rozdielne kultúry, jedlo, pulzujúce mestá aj miesta ďaleko od hlavných trás.",
+    travelTags: ["Ázia", "Kultúry", "Jedlo", "Mimo hlavných trás"],
+    contactKicker: "06 / SPOJME SA",
+    contactTitle: "Ozvite sa mi.",
+    contactBody:
+      "Ak máte otázku, nápad na spoluprácu alebo sa chcete porozprávať o technológiách či maker projektoch, napíšte mi.",
+    contactFormLabel: "KONTAKT",
+    contactFormEndpoint: "Kontaktný formulár",
+    contactName: "Meno",
+    contactNamePlaceholder: "Ako sa voláte?",
+    contactEmail: "E-mail",
+    contactEmailPlaceholder: "vas@email.sk",
+    contactSubject: "Predmet",
+    contactSubjectPlaceholder: "O čom sa chcete porozprávať?",
+    contactMessage: "Správa",
+    contactMessagePlaceholder: "Napíšte mi viac o tom, čo máte na mysli...",
+    contactSend: "Odoslať správu",
+    contactSuccess: "Správa bola odoslaná. Ozvem sa čo najskôr.",
+    footerNote: "Navrhnuté medzi kódom a cínom.",
+    footerTop: "HORE ↑",
+    easterEgg: {
+      title: "MAKER MODE ODOMKNUTÝ",
+      close: "Zavrieť Maker Mode",
+      drag: "Potiahnutím presunúť okno",
+      lines: [
+        "SPÁJKOVAČKA: 350 °C",
+        "VENTILÁCIA: ONLINE",
+        "POSLEDNÁ SKRUTKA: STÁLE NEZVESTNÁ",
+      ],
+    },
+    links: {
+      github: "GitHub",
+      linkedin: "LinkedIn",
+      instagram: "Instagram",
+    },
+  } as const;

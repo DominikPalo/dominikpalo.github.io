@@ -16,5 +16,5 @@
     "moduleDetection": "force",
     "jsx": "react-jsx"
   },
-  "include": ["src", "app/page.tsx"]
+  "include": ["src", "app"]
 }
