@@ -166,7 +166,7 @@ const copy = {
     communityKicker: "04 / KOMUNITA",
     communityTitle: "Technológia má zmysel, keď sa zdieľa.",
     communityBody:
-      "Vo voľnom čase pôsobím v MakerSpace Bratislava — komunitnej dielni v Novej Cvernovke. Dobrovoľníčim pri jej fungovaní, pomáham ľuďom s elektronikou a maker projektmi, lektorujem a vediem praktické kurzy.",
+      "Vo voľnom čase pôsobím v MakerSpace Bratislava — komunitnej dielni v Novej Cvernovke. Dobrovoľníčim pri jej fungovaní, pomáham ľuďom s elektronikou a maker projektmi, lektorujem, vediem praktické kurzy a pomáham pri Elektro krúžku pre deti.",
     communityCourseLabel: "MÔJ KURZ V MSBA",
     communityCourseTitle: "Základy elektroniky",
     communityCourseBody:
@@ -179,11 +179,23 @@ const copy = {
     communityCourseAudience:
       "Kurz je vhodný pre začiatočníkov, hobby nadšencov, DIY makerov a študentov. Všetko náradie a pomôcky sú pripravené na mieste; odporúčaný je vlastný notebook.",
     communityCourseCta: "Viac o kurze",
+    communityKidsLabel: "POMÁHAM LEKTOROVAŤ",
+    communityKidsTitle: "Elektro krúžok pre deti",
+    communityKidsBody:
+      "Pravidelný krúžok približuje deťom elektroniku zrozumiteľne a prakticky. Od základov elektriny a jednoduchých obvodov postupne prechádzajú k programovateľným projektom s Arduinom.",
+    communityKidsFacts: [
+      ["8–15 ROKOV", "pre zvedavé deti a mladých makerov"],
+      ["STREDY", "pravidelné dvojhodinové stretnutia"],
+      ["MAX. 8 DETÍ", "vlastný projekt a individuálny prístup"],
+    ],
+    communityKidsAudience:
+      "Deti skladajú obvody na breadboarde s LED diódami, senzormi a motormi, programujú Arduino a vytvárajú vlastné projekty — napríklad blikač, teplomer, zvonček alebo malého robota. Materiál je zabezpečený.",
+    communityKidsCta: "Viac o krúžku",
     communityCta: "Navštíviť MakerSpace Bratislava",
     communityConsole: "MAKERSPACE BRATISLAVA",
     communityRoles: [
       ["DOBROVOĽNÍK", "Pomoc komunite a dielni"],
-      ["LEKTOR", "Zdieľanie elektronického know-how"],
+      ["LEKTOR", "Elektro kurzy a krúžok pre deti"],
       ["VEDENIE KURZOV", "Základy elektroniky a spájkovania"],
     ],
     hobbiesKicker: "05 / VOĽNÝ ČAS",
@@ -371,7 +383,7 @@ const copy = {
     communityKicker: "04 / COMMUNITY",
     communityTitle: "Technology matters when it is shared.",
     communityBody:
-      "In my free time, I’m active at MakerSpace Bratislava — a community workshop at Nová Cvernovka. I volunteer to help run the space, support people with electronics and maker projects, teach, and lead hands-on courses.",
+      "In my free time, I’m active at MakerSpace Bratislava — a community workshop at Nová Cvernovka. I volunteer to help run the space, support people with electronics and maker projects, teach, lead hands-on courses, and help with the children’s Electronics Club.",
     communityCourseLabel: "MY COURSE AT MSBA",
     communityCourseTitle: "Electronics fundamentals",
     communityCourseBody:
@@ -384,11 +396,23 @@ const copy = {
     communityCourseAudience:
       "The course is designed for beginners, hobbyists, DIY makers, and students. All tools and materials are provided on site; bringing your own laptop is recommended.",
     communityCourseCta: "View course details",
+    communityKidsLabel: "I HELP TEACH",
+    communityKidsTitle: "Electronics club for children",
+    communityKidsBody:
+      "A regular club that makes electronics approachable and practical for children. They progress from the fundamentals of electricity and simple circuits to programmable projects with Arduino.",
+    communityKidsFacts: [
+      ["AGES 8–15", "for curious children and young makers"],
+      ["WEDNESDAYS", "regular two-hour sessions"],
+      ["MAX. 8 CHILDREN", "individual guidance and personal projects"],
+    ],
+    communityKidsAudience:
+      "Children build breadboard circuits with LEDs, sensors, and motors, program Arduino, and create their own projects — such as a blinker, thermometer, doorbell, or small robot. Materials are provided.",
+    communityKidsCta: "View club details",
     communityCta: "Visit MakerSpace Bratislava",
     communityConsole: "MAKERSPACE BRATISLAVA",
     communityRoles: [
       ["VOLUNTEER", "Helping the community and workshop"],
-      ["LECTURER", "Sharing electronics know-how"],
+      ["LECTURER", "Electronics courses and children’s club"],
       ["COURSE LEAD", "Electronics and soldering fundamentals"],
     ],
     hobbiesKicker: "05 / FREE TIME",
@@ -1046,6 +1070,34 @@ export default function Home() {
                 rel="noreferrer"
               >
                 {t.communityCourseCta} <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </article>
+
+          <article
+            className="community-course-feature"
+            aria-labelledby="electronics-club-title"
+          >
+            <div className="community-course-overview">
+              <span className="community-course-label">{t.communityKidsLabel}</span>
+              <h3 id="electronics-club-title">{t.communityKidsTitle}</h3>
+              <p>{t.communityKidsBody}</p>
+              <div className="community-course-facts">
+                {t.communityKidsFacts.map(([value, label]) => (
+                  <div key={value}>
+                    <strong>{value}</strong>
+                    <span>{label}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="community-course-audience">{t.communityKidsAudience}</p>
+              <a
+                className="button button-secondary"
+                href="https://msba.sk/elektro-dielna/elektro-kruzok/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {t.communityKidsCta} <span aria-hidden="true">↗</span>
               </a>
             </div>
           </article>
