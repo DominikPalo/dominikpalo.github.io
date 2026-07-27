@@ -43,7 +43,6 @@ const copy = {
     themeSwitch: "Zmeniť farebný režim",
     themeSwitchToLight: "Prepnúť na svetlý režim",
     themeSwitchToDark: "Prepnúť na tmavý režim",
-    status: "SYSTÉM ONLINE",
     location: "Bratislava / Slovensko",
     eyebrow: "SOFTVÉROVÝ INŽINIER × MAKER",
     heroTitleTop: "Tvorím softvér,",
@@ -76,7 +75,7 @@ const copy = {
     makerTitle: "MAKER & MENTOR",
     makerBody:
       "Navrhujem PCB a programujem mikrokontroléry ESP32, STM32 či AVR. Mám skúsenosti s 3D modelovaním a obzvlášť ma baví navrhovať funkčné diely a modely pre 3D tlač v Autodesk Fusion. V MakerSpace Bratislava dobrovoľníčim, odovzdávam skúsenosti ako lektor a vediem praktické kurzy.",
-    stackLabel: "AKTÍVNY TOOLCHAIN",
+    stackLabel: "TECHNOLÓGIE A NÁSTROJE",
     stack: ["Swift", "C#", "TypeScript", "React", "Node.js", "C / C++", "ESP32", "KiCad", "Autodesk Fusion", "3D tlač"],
     workKicker: "02 / VYBRANÉ PROJEKTY",
     workTitle: "Veci, ktoré fungujú v reálnom svete.",
@@ -169,22 +168,22 @@ const copy = {
     communityBody:
       "Vo voľnom čase pôsobím v MakerSpace Bratislava — komunitnej dielni v Novej Cvernovke. Dobrovoľníčim pri jej fungovaní, pomáham ľuďom s elektronikou a maker projektmi, lektorujem a vediem praktické kurzy.",
     communityCta: "Navštíviť MakerSpace Bratislava",
-    communityConsole: "MSBA://KOMUNITA",
+    communityConsole: "MAKERSPACE BRATISLAVA",
     communityRoles: [
       ["DOBROVOĽNÍK", "Pomoc komunite a dielni"],
       ["LEKTOR", "Zdieľanie elektronického know-how"],
       ["VEDENIE KURZOV", "Praktické kurzy od nápadu k výrobku"],
     ],
-    hobbiesKicker: "05 / OFFLINE MODE",
+    hobbiesKicker: "05 / VOĽNÝ ČAS",
     hobbiesTitle: "Keď nie som za počítačom, som na cestách.",
     hobbiesIntro:
       "Technológie sú veľká časť môjho sveta, ale tie najlepšie zážitky často začínajú mimo obrazovky.",
-    rideLabel: "RIDE / 01",
+    rideLabel: "MOTORKA",
     rideTitle: "Honda NC750X",
     rideBody:
       "Jazda na motorke je pre mňa spôsob, ako vyčistiť hlavu, zmeniť perspektívu a objavovať cestu bez pevného plánu. Najradšej zo sedla vlastnej Hondy NC750X.",
     rideTags: ["Dve kolesá", "Otvorená cesta", "Bez pevného plánu"],
-    travelLabel: "TRAVEL / 02",
+    travelLabel: "CESTOVANIE",
     travelTitle: "Takmer celá Ázia",
     travelBody:
       "Veľmi rád cestujem — najmä po Ázii, ktorú mám precestovanú takmer celú. Fascinujú ma rozdielne kultúry, jedlo, pulzujúce mestá aj miesta ďaleko od hlavných trás.",
@@ -193,7 +192,7 @@ const copy = {
     contactTitle: "Ozvite sa mi.",
     contactBody:
       "Ak máte otázku, nápad na spoluprácu alebo sa chcete porozprávať o technológiách či maker projektoch, napíšte mi.",
-    contactFormLabel: "SPRÁVA / SECURE CHANNEL",
+    contactFormLabel: "KONTAKT",
     contactFormEndpoint: "Kontaktný formulár",
     contactName: "Meno",
     contactNamePlaceholder: "Ako sa voláte?",
@@ -202,7 +201,7 @@ const copy = {
     contactSubject: "Predmet",
     contactSubjectPlaceholder: "O čom sa chcete porozprávať?",
     contactMessage: "Správa",
-    contactMessagePlaceholder: "Napíšte mi viac o vašom nápade alebo probléme...",
+    contactMessagePlaceholder: "Napíšte mi viac o tom, čo máte na mysli...",
     contactSend: "Odoslať správu",
     contactSuccess: "Správa bola odoslaná. Ozvem sa čo najskôr.",
     footerNote: "Navrhnuté medzi kódom a cínom.",
@@ -237,7 +236,6 @@ const copy = {
     themeSwitch: "Change color mode",
     themeSwitchToLight: "Switch to light mode",
     themeSwitchToDark: "Switch to dark mode",
-    status: "SYSTEM ONLINE",
     location: "Bratislava / Slovakia",
     eyebrow: "SOFTWARE ENGINEER × MAKER",
     heroTitleTop: "I build software",
@@ -270,7 +268,7 @@ const copy = {
     makerTitle: "MAKER & MENTOR",
     makerBody:
       "I design PCBs and program ESP32, STM32, and AVR microcontrollers. I’m experienced in 3D modelling and especially enjoy designing functional parts and models for 3D printing in Autodesk Fusion. At MakerSpace Bratislava, I volunteer, share knowledge as a lecturer, and lead hands-on courses.",
-    stackLabel: "ACTIVE TOOLCHAIN",
+    stackLabel: "TECHNOLOGIES & TOOLS",
     stack: ["Swift", "C#", "TypeScript", "React", "Node.js", "C / C++", "ESP32", "KiCad", "Autodesk Fusion", "3D printing"],
     workKicker: "02 / SELECTED WORK",
     workTitle: "Things that work in the real world.",
@@ -363,22 +361,22 @@ const copy = {
     communityBody:
       "In my free time, I’m active at MakerSpace Bratislava — a community workshop at Nová Cvernovka. I volunteer to help run the space, support people with electronics and maker projects, teach, and lead hands-on courses.",
     communityCta: "Visit MakerSpace Bratislava",
-    communityConsole: "MSBA://COMMUNITY",
+    communityConsole: "MAKERSPACE BRATISLAVA",
     communityRoles: [
       ["VOLUNTEER", "Helping the community and workshop"],
       ["LECTURER", "Sharing electronics know-how"],
       ["COURSE LEAD", "Hands-on courses from idea to object"],
     ],
-    hobbiesKicker: "05 / OFFLINE MODE",
+    hobbiesKicker: "05 / FREE TIME",
     hobbiesTitle: "When I’m away from the computer, I’m on the road.",
     hobbiesIntro:
       "Technology is a big part of my world, but the best experiences often begin away from a screen.",
-    rideLabel: "RIDE / 01",
+    rideLabel: "MOTORCYCLING",
     rideTitle: "Honda NC750X",
     rideBody:
       "Riding clears my head, changes my perspective, and turns the road itself into the destination. My Honda NC750X is my favourite way to set off without a fixed plan.",
     rideTags: ["Two wheels", "Open road", "No fixed plan"],
-    travelLabel: "TRAVEL / 02",
+    travelLabel: "TRAVEL",
     travelTitle: "Almost all of Asia",
     travelBody:
       "I love travelling, especially across Asia — a continent I have explored almost in its entirety. I’m drawn to its different cultures, food, restless cities, and places far beyond the main routes.",
@@ -387,7 +385,7 @@ const copy = {
     contactTitle: "Let’s talk.",
     contactBody:
       "If you have a question, an idea for collaboration, or simply want to talk about technology or maker projects, send me a message.",
-    contactFormLabel: "MESSAGE / SECURE CHANNEL",
+    contactFormLabel: "CONTACT",
     contactFormEndpoint: "Contact form",
     contactName: "Name",
     contactNamePlaceholder: "What should I call you?",
@@ -396,7 +394,7 @@ const copy = {
     contactSubject: "Subject",
     contactSubjectPlaceholder: "What would you like to discuss?",
     contactMessage: "Message",
-    contactMessagePlaceholder: "Tell me more about your idea or problem...",
+    contactMessagePlaceholder: "Tell me more about what you have in mind...",
     contactSend: "Send message",
     contactSuccess: "Your message has been sent. I’ll get back to you soon.",
     footerNote: "Designed between code and solder.",
@@ -742,9 +740,6 @@ export default function Home() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <div className="system-status">
-              <span className="status-dot" />
-              {t.status}
-              <span className="status-divider">/</span>
               {t.location}
             </div>
             <p className="eyebrow">{t.eyebrow}</p>
@@ -861,7 +856,6 @@ export default function Home() {
           <div className="toolchain">
             <div className="toolchain-header">
               <span>{t.stackLabel}</span>
-              <span className="toolchain-pulse">SIGNAL: STABLE</span>
             </div>
             <div className="tool-list">
               {t.stack.map((item) => (
@@ -1027,7 +1021,6 @@ export default function Home() {
             <article className="hobby-card ride-card">
               <div className="hobby-card-header">
                 <span>{t.rideLabel}</span>
-                <span>ROAD STATUS: OPEN</span>
               </div>
               <div className="ride-visual" aria-hidden="true">
                 <img
@@ -1050,7 +1043,6 @@ export default function Home() {
             <article className="hobby-card travel-card">
               <div className="hobby-card-header">
                 <span>{t.travelLabel}</span>
-                <span>REGION: ASIA</span>
               </div>
               <div className="travel-visual" aria-hidden="true">
                 <img className="asia-map-outline" src="/asia-outline.png" alt="" />

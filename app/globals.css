@@ -315,9 +315,6 @@ html[data-theme="dark"] .theme-icon-dark {
 }
 
 .system-status {
-  display: flex;
-  align-items: center;
-  gap: 10px;
   width: fit-content;
   border: 0;
   background: transparent;
@@ -325,18 +322,6 @@ html[data-theme="dark"] .theme-icon-dark {
   padding: 0;
   font: 550 0.64rem var(--font-mono);
   letter-spacing: 0.08em;
-}
-
-.status-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--cyan);
-  opacity: 0.82;
-}
-
-.status-divider {
-  color: var(--navy-700);
 }
 
 .eyebrow,
@@ -708,15 +693,9 @@ html[data-theme="dark"] .theme-icon-dark {
 }
 
 .toolchain-header {
-  display: flex;
-  justify-content: space-between;
   color: var(--muted);
   font: 600 0.63rem var(--font-mono);
   letter-spacing: 0.08em;
-}
-
-.toolchain-pulse {
-  display: none;
 }
 
 .tool-list {
@@ -1109,9 +1088,6 @@ html[data-theme="dark"] .theme-icon-dark {
 }
 
 .hobby-card-header {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
   border-bottom: 1px solid var(--line);
   padding: 14px 18px;
   color: var(--muted);
@@ -1119,7 +1095,7 @@ html[data-theme="dark"] .theme-icon-dark {
   letter-spacing: 0.08em;
 }
 
-.hobby-card-header span:first-child {
+.hobby-card-header span {
   color: var(--cyan);
 }
 
