@@ -166,7 +166,7 @@ const copy = {
     communityKicker: "04 / KOMUNITA",
     communityTitle: "Technológia má zmysel, keď sa zdieľa.",
     communityBody:
-      "Vo voľnom čase pôsobím v MakerSpace Bratislava — komunitnej dielni v Novej Cvernovke. Dobrovoľníčim pri jej fungovaní, pomáham ľuďom s elektronikou a maker projektmi, lektorujem, vediem praktické kurzy a pomáham pri Elektro krúžku pre deti.",
+      "Vo voľnom čase pôsobím v MakerSpace Bratislava — komunitnej dielni v Novej Cvernovke. Dobrovoľníčim pri jej fungovaní, pomáham ľuďom s elektronikou a maker projektmi, lektorujem, vediem praktické kurzy a pomáham pri Elektro krúžku pre deti. Pripravujem tiež kurz 3D modelovania pre tlač.",
     communityCourseLabel: "MÔJ KURZ V MSBA",
     communityCourseTitle: "Základy elektroniky",
     communityCourseBody:
@@ -191,12 +191,24 @@ const copy = {
     communityKidsAudience:
       "Deti skladajú obvody na breadboarde s LED diódami, senzormi a motormi, programujú Arduino a vytvárajú vlastné projekty — napríklad blikač, teplomer, zvonček alebo malého robota. Materiál je zabezpečený.",
     communityKidsCta: "Viac o krúžku",
+    communityModellingLabel: "PRIPRAVOVANÝ KURZ",
+    communityModellingTitle: "Modelovanie pre 3D tlač",
+    communityModellingBody:
+      "Týždenný kurz pre dospelých zameraný na tvorbu funkčných 3D modelov v Autodesk Fusion. Účastníci sa naučia pretaviť vlastný nápad do premysleného digitálneho návrhu, ktorý je možné spoľahlivo vyrobiť pomocou 3D tlače.",
+    communityModellingFacts: [
+      ["PRE DOSPELÝCH", "prakticky a zrozumiteľne"],
+      ["KAŽDÝ TÝŽDEŇ", "pravidelné stretnutia"],
+      ["AUTODESK FUSION", "hlavný nástroj kurzu"],
+    ],
+    communityModellingAudience:
+      "Kurz prevedie účastníkov celým procesom — od vytvorenia parametrického modelu cez správne rozmery, tolerancie a konštrukčné zásady až po kontrolu geometrie, orientáciu a export modelu na ďalšie spracovanie a tlač.",
+    communityModellingStatus: "Viac informácií už čoskoro",
     communityCta: "Navštíviť MakerSpace Bratislava",
     communityConsole: "MAKERSPACE BRATISLAVA",
     communityRoles: [
       ["DOBROVOĽNÍK", "Pomoc komunite a dielni"],
       ["LEKTOR", "Elektro kurzy a krúžok pre deti"],
-      ["VEDENIE KURZOV", "Základy elektroniky a spájkovania"],
+      ["VEDENIE KURZOV", "Elektronika a 3D modelovanie"],
     ],
     hobbiesKicker: "05 / VOĽNÝ ČAS",
     hobbiesTitle: "Keď nie som za počítačom, som na cestách.",
@@ -383,7 +395,7 @@ const copy = {
     communityKicker: "04 / COMMUNITY",
     communityTitle: "Technology matters when it is shared.",
     communityBody:
-      "In my free time, I’m active at MakerSpace Bratislava — a community workshop at Nová Cvernovka. I volunteer to help run the space, support people with electronics and maker projects, teach, lead hands-on courses, and help with the children’s Electronics Club.",
+      "In my free time, I’m active at MakerSpace Bratislava — a community workshop at Nová Cvernovka. I volunteer to help run the space, support people with electronics and maker projects, teach, lead hands-on courses, and help with the children’s Electronics Club. I’m also preparing a course on 3D modelling for printing.",
     communityCourseLabel: "MY COURSE AT MSBA",
     communityCourseTitle: "Electronics fundamentals",
     communityCourseBody:
@@ -408,12 +420,24 @@ const copy = {
     communityKidsAudience:
       "Children build breadboard circuits with LEDs, sensors, and motors, program Arduino, and create their own projects — such as a blinker, thermometer, doorbell, or small robot. Materials are provided.",
     communityKidsCta: "View club details",
+    communityModellingLabel: "UPCOMING COURSE",
+    communityModellingTitle: "3D modelling for printing",
+    communityModellingBody:
+      "A weekly course for adults focused on creating functional 3D models in Autodesk Fusion. Participants will learn how to turn an idea into a considered digital design that can be produced reliably with 3D printing.",
+    communityModellingFacts: [
+      ["FOR ADULTS", "practical and approachable"],
+      ["WEEKLY", "regular sessions"],
+      ["AUTODESK FUSION", "the course’s primary tool"],
+    ],
+    communityModellingAudience:
+      "The course will cover the complete process — from creating a parametric model and choosing the right dimensions, tolerances, and design principles to checking geometry, orienting the part, and exporting it for further preparation and printing.",
+    communityModellingStatus: "More information coming soon",
     communityCta: "Visit MakerSpace Bratislava",
     communityConsole: "MAKERSPACE BRATISLAVA",
     communityRoles: [
       ["VOLUNTEER", "Helping the community and workshop"],
       ["LECTURER", "Electronics courses and children’s club"],
-      ["COURSE LEAD", "Electronics and soldering fundamentals"],
+      ["COURSE LEAD", "Electronics and 3D modelling"],
     ],
     hobbiesKicker: "05 / FREE TIME",
     hobbiesTitle: "When I’m away from the computer, I’m on the road.",
@@ -1099,6 +1123,30 @@ export default function Home() {
               >
                 {t.communityKidsCta} <span aria-hidden="true">↗</span>
               </a>
+            </div>
+          </article>
+
+          <article
+            className="community-course-feature community-course-feature--upcoming"
+            aria-labelledby="modelling-course-title"
+          >
+            <div className="community-course-overview">
+              <span className="community-course-label">{t.communityModellingLabel}</span>
+              <h3 id="modelling-course-title">{t.communityModellingTitle}</h3>
+              <p>{t.communityModellingBody}</p>
+              <div className="community-course-facts">
+                {t.communityModellingFacts.map(([value, label]) => (
+                  <div key={value}>
+                    <strong>{value}</strong>
+                    <span>{label}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="community-course-audience">{t.communityModellingAudience}</p>
+              <p className="community-course-status">
+                <span aria-hidden="true" />
+                {t.communityModellingStatus}
+              </p>
             </div>
           </article>
         </div>

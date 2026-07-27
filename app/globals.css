@@ -998,6 +998,12 @@ html[data-theme="dark"] .theme-icon-dark {
   background: rgba(255, 255, 255, 0.012);
 }
 
+.community-course-feature--upcoming {
+  background:
+    linear-gradient(90deg, rgba(54, 213, 238, 0.035), transparent 42%),
+    rgba(255, 255, 255, 0.012);
+}
+
 .community-course-overview {
   padding: clamp(36px, 5vw, 68px);
 }
@@ -1056,6 +1062,25 @@ html[data-theme="dark"] .theme-icon-dark {
 
 .community-course-audience {
   max-width: 900px;
+}
+
+.community-course-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  color: var(--cyan-soft);
+  font: 650 0.62rem var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.community-course-status span {
+  width: 7px;
+  height: 7px;
+  border: 1px solid var(--cyan);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba(54, 213, 238, 0.08);
 }
 
 .community-course-overview .button {
@@ -1572,6 +1597,12 @@ html[data-theme="light"] .maker-panel,
 html[data-theme="light"] .community-shell,
 html[data-theme="light"] .community-course-feature {
   background: rgba(255, 255, 255, 0.56);
+}
+
+html[data-theme="light"] .community-course-feature--upcoming {
+  background:
+    linear-gradient(90deg, rgba(44, 112, 121, 0.045), transparent 42%),
+    rgba(255, 255, 255, 0.56);
 }
 
 html[data-theme="light"] .hero {
