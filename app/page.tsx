@@ -170,7 +170,24 @@ const copy = {
     communityCourseLabel: "MÔJ KURZ V MSBA",
     communityCourseTitle: "Základy elektroniky",
     communityCourseBody:
-      "Vediem 8-hodinový kurz pre úplných začiatočníkov, ktorý prepája teóriu s praxou — od čítania schém a merania multimetrom až po bezpečné spájkovanie a základné elektronické obvody.",
+      "Celodenný kurz pre úplných začiatočníkov, ktorí chcú porozumieť elektrickým obvodom a získať istotu pri bezpečnej práci s komponentmi, meraním a spájkovaním. Obsah je rozdelený do štyroch blokov — pojmy, vybavenie, komponenty a spájkovanie — a výklad dopĺňajú praktické experimenty.",
+    communityCourseFacts: [
+      ["8 HODÍN", "teória + praktické cvičenia"],
+      ["PRE ZAČIATOČNÍKOV", "bez predchádzajúcich skúseností"],
+      ["MALÁ SKUPINA", "individuálny prístup"],
+    ],
+    communityCourseTopicsTitle: "Čo sa naučíš",
+    communityCourseTopics: [
+      "AC/DC, Ohmov a Kirchhoffove zákony, sériové a paralelné zapojenia",
+      "Multimeter, tester komponentov, laboratórny zdroj, osciloskop a generátor signálov",
+      "Rezistory, potenciometre, kondenzátory, cievky, diódy, LED a tranzistory",
+      "Breadboard, čítanie schém a orientácia v datasheetoch",
+      "Experimenty s napäťovým deličom, RC/RL filtrami, usmerňovačmi a PWM",
+      "Stavba astabilného multivibrátora ako funkčného obvodu",
+      "Bezpečné spájkovanie THT komponentov, práca s tavidlom a kontrola spojov",
+    ],
+    communityCourseAudience:
+      "Kurz je vhodný pre začiatočníkov, hobby nadšencov, DIY makerov a študentov. Všetko náradie a pomôcky sú pripravené na mieste; odporúčaný je vlastný notebook.",
     communityCourseCta: "Viac o kurze",
     communityCta: "Navštíviť MakerSpace Bratislava",
     communityConsole: "MAKERSPACE BRATISLAVA",
@@ -368,7 +385,24 @@ const copy = {
     communityCourseLabel: "MY COURSE AT MSBA",
     communityCourseTitle: "Electronics fundamentals",
     communityCourseBody:
-      "I lead an eight-hour course for complete beginners that combines theory with hands-on practice — from reading schematics and using a multimeter to safe soldering and basic electronic circuits.",
+      "A full-day course for complete beginners who want to understand electrical circuits and gain confidence working safely with components, measurements, and soldering. The content is organised into four parts — concepts, equipment, components, and soldering — with hands-on experiments throughout.",
+    communityCourseFacts: [
+      ["8 HOURS", "theory + practical exercises"],
+      ["BEGINNER FRIENDLY", "no previous experience needed"],
+      ["SMALL GROUP", "individual guidance"],
+    ],
+    communityCourseTopicsTitle: "What you will learn",
+    communityCourseTopics: [
+      "AC/DC, Ohm’s and Kirchhoff’s laws, series and parallel circuits",
+      "Multimeter, component tester, bench power supply, oscilloscope, and signal generator",
+      "Resistors, potentiometers, capacitors, inductors, diodes, LEDs, and transistors",
+      "Breadboards, reading schematics, and navigating datasheets",
+      "Experiments with voltage dividers, RC/RL filters, rectifiers, and PWM",
+      "Building an astable multivibrator as a working circuit",
+      "Safe THT soldering, working with flux, and inspecting reliable joints",
+    ],
+    communityCourseAudience:
+      "The course is designed for beginners, hobbyists, DIY makers, and students. All tools and materials are provided on site; bringing your own laptop is recommended.",
     communityCourseCta: "View course details",
     communityCta: "Visit MakerSpace Bratislava",
     communityConsole: "MAKERSPACE BRATISLAVA",
@@ -980,18 +1014,6 @@ export default function Home() {
               <p className="section-kicker">{t.communityKicker}</p>
               <h2 id="community-title">{t.communityTitle}</h2>
               <p>{t.communityBody}</p>
-              <div className="community-course">
-                <span>{t.communityCourseLabel}</span>
-                <h3>{t.communityCourseTitle}</h3>
-                <p>{t.communityCourseBody}</p>
-                <a
-                  href="https://msba.sk/elektro-dielna/zaklady-elektroniky/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {t.communityCourseCta} <span aria-hidden="true">↗</span>
-                </a>
-              </div>
               <a
                 className="button button-light"
                 href="https://www.msba.sk"
@@ -1022,6 +1044,40 @@ export default function Home() {
               </div>
             </div>
           </div>
+
+          <article className="community-course-feature" aria-labelledby="course-title">
+            <div className="community-course-overview">
+              <span className="community-course-label">{t.communityCourseLabel}</span>
+              <h3 id="course-title">{t.communityCourseTitle}</h3>
+              <p>{t.communityCourseBody}</p>
+              <div className="community-course-facts">
+                {t.communityCourseFacts.map(([value, label]) => (
+                  <div key={value}>
+                    <strong>{value}</strong>
+                    <span>{label}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="community-course-audience">{t.communityCourseAudience}</p>
+              <a
+                className="button button-secondary"
+                href="https://msba.sk/elektro-dielna/zaklady-elektroniky/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {t.communityCourseCta} <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <div className="community-course-topics">
+              <span>{t.communityCourseTopicsTitle}</span>
+              <ul>
+                {t.communityCourseTopics.map((topic) => (
+                  <li key={topic}>{topic}</li>
+                ))}
+              </ul>
+            </div>
+          </article>
         </div>
       </section>
 
