@@ -993,20 +993,16 @@ html[data-theme="dark"] .theme-icon-dark {
 }
 
 .community-course-feature {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
   border: 1px solid var(--line);
   border-top: 0;
   background: rgba(255, 255, 255, 0.012);
 }
 
-.community-course-overview,
-.community-course-topics {
+.community-course-overview {
   padding: clamp(36px, 5vw, 68px);
 }
 
-.community-course-label,
-.community-course-topics > span {
+.community-course-label {
   color: var(--cyan);
   font: 650 0.58rem var(--font-mono);
   letter-spacing: 0.1em;
@@ -1021,7 +1017,7 @@ html[data-theme="dark"] .theme-icon-dark {
 }
 
 .community-course-overview > p {
-  max-width: 720px;
+  max-width: 900px;
   margin: 20px 0 0;
   color: var(--muted);
   line-height: 1.75;
@@ -1030,6 +1026,7 @@ html[data-theme="dark"] .theme-icon-dark {
 .community-course-facts {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  max-width: 900px;
   margin-top: 30px;
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
@@ -1057,38 +1054,13 @@ html[data-theme="dark"] .theme-icon-dark {
   font-size: 0.78rem;
 }
 
+.community-course-audience {
+  max-width: 900px;
+}
+
 .community-course-overview .button {
   width: fit-content;
   margin-top: 28px;
-}
-
-.community-course-topics {
-  border-left: 1px solid var(--line);
-  background: var(--navy-950);
-}
-
-.community-course-topics ul {
-  margin: 28px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.community-course-topics li {
-  position: relative;
-  border-bottom: 1px solid var(--line);
-  color: var(--muted);
-  padding: 14px 0 14px 22px;
-  line-height: 1.55;
-}
-
-.community-course-topics li::before {
-  position: absolute;
-  top: 24px;
-  left: 0;
-  width: 8px;
-  height: 1px;
-  background: var(--cyan);
-  content: "";
 }
 
 .button-light {
@@ -1844,16 +1816,10 @@ html[data-theme="light"] .contact-field textarea:focus-visible {
   .horizontal-heading,
   .experience-layout,
   .community-shell,
-  .community-course-feature,
   .hobbies-grid,
   .contact-channel,
   .footer-main {
     grid-template-columns: 1fr;
-  }
-
-  .community-course-topics {
-    border-top: 1px solid var(--line);
-    border-left: 0;
   }
 
   .community-course-facts {

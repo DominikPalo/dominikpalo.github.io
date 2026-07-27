@@ -176,16 +176,6 @@ const copy = {
       ["PRE ZAČIATOČNÍKOV", "bez predchádzajúcich skúseností"],
       ["MALÁ SKUPINA", "individuálny prístup"],
     ],
-    communityCourseTopicsTitle: "Čo sa naučíš",
-    communityCourseTopics: [
-      "AC/DC, Ohmov a Kirchhoffove zákony, sériové a paralelné zapojenia",
-      "Multimeter, tester komponentov, laboratórny zdroj, osciloskop a generátor signálov",
-      "Rezistory, potenciometre, kondenzátory, cievky, diódy, LED a tranzistory",
-      "Breadboard, čítanie schém a orientácia v datasheetoch",
-      "Experimenty s napäťovým deličom, RC/RL filtrami, usmerňovačmi a PWM",
-      "Stavba astabilného multivibrátora ako funkčného obvodu",
-      "Bezpečné spájkovanie THT komponentov, práca s tavidlom a kontrola spojov",
-    ],
     communityCourseAudience:
       "Kurz je vhodný pre začiatočníkov, hobby nadšencov, DIY makerov a študentov. Všetko náradie a pomôcky sú pripravené na mieste; odporúčaný je vlastný notebook.",
     communityCourseCta: "Viac o kurze",
@@ -390,16 +380,6 @@ const copy = {
       ["8 HOURS", "theory + practical exercises"],
       ["BEGINNER FRIENDLY", "no previous experience needed"],
       ["SMALL GROUP", "individual guidance"],
-    ],
-    communityCourseTopicsTitle: "What you will learn",
-    communityCourseTopics: [
-      "AC/DC, Ohm’s and Kirchhoff’s laws, series and parallel circuits",
-      "Multimeter, component tester, bench power supply, oscilloscope, and signal generator",
-      "Resistors, potentiometers, capacitors, inductors, diodes, LEDs, and transistors",
-      "Breadboards, reading schematics, and navigating datasheets",
-      "Experiments with voltage dividers, RC/RL filters, rectifiers, and PWM",
-      "Building an astable multivibrator as a working circuit",
-      "Safe THT soldering, working with flux, and inspecting reliable joints",
     ],
     communityCourseAudience:
       "The course is designed for beginners, hobbyists, DIY makers, and students. All tools and materials are provided on site; bringing your own laptop is recommended.",
@@ -1067,15 +1047,6 @@ export default function Home() {
               >
                 {t.communityCourseCta} <span aria-hidden="true">↗</span>
               </a>
-            </div>
-
-            <div className="community-course-topics">
-              <span>{t.communityCourseTopicsTitle}</span>
-              <ul>
-                {t.communityCourseTopics.map((topic) => (
-                  <li key={topic}>{topic}</li>
-                ))}
-              </ul>
             </div>
           </article>
         </div>
