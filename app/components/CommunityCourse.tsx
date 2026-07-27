@@ -11,6 +11,8 @@ type CommunityCourseProps = {
   cta?: string;
   status?: string;
   upcoming?: boolean;
+  expandLabel: string;
+  collapseLabel: string;
 };
 
 export function CommunityCourse({
@@ -24,16 +26,31 @@ export function CommunityCourse({
   cta,
   status,
   upcoming = false,
+  expandLabel,
+  collapseLabel,
 }: CommunityCourseProps) {
   return (
-    <article
+    <details
       className={`community-course-feature${upcoming ? " community-course-feature--upcoming" : ""}`}
       aria-labelledby={id}
     >
-      <div className="community-course-overview">
+      <summary className="community-course-summary">
         <span className="community-course-label">{label}</span>
         <h3 id={id}>{title}</h3>
-        <p>{body}</p>
+        <div className="community-course-preview">
+          {facts.map(([value]) => (
+            <strong key={value}>{value}</strong>
+          ))}
+        </div>
+        <span className="community-course-toggle">
+          <span className="community-course-expand">{expandLabel}</span>
+          <span className="community-course-collapse">{collapseLabel}</span>
+          <i aria-hidden="true" />
+        </span>
+      </summary>
+
+      <div className="community-course-detail">
+        <p className="community-course-body">{body}</p>
         <div className="community-course-facts">
           {facts.map(([value, factLabel]) => (
             <div key={value}>
@@ -60,6 +77,6 @@ export function CommunityCourse({
           </p>
         )}
       </div>
-    </article>
+    </details>
   );
 }

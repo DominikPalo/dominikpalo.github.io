@@ -25,6 +25,14 @@
   .projects-grid {
     align-items: stretch;
   }
+
+  .community-courses-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .community-course-feature:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
 }
 
 @media (max-width: 860px) {
@@ -47,8 +55,13 @@
     grid-template-columns: 1fr;
   }
 
+  .community-courses-grid,
   .community-course-facts {
     grid-template-columns: 1fr;
+  }
+
+  .community-course-feature:last-child:nth-child(odd) {
+    grid-column: auto;
   }
 
   .contact-channel-meta {
@@ -151,6 +164,15 @@
 
   .identity-panel {
     min-height: auto;
+  }
+
+  .community-course-summary {
+    min-height: 240px;
+    padding: 26px;
+  }
+
+  .community-course-detail {
+    padding: 26px;
   }
 
   .projects-grid {

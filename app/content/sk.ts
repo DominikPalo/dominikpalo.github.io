@@ -136,6 +136,8 @@ export const sk = {
     communityTitle: "Technológia má zmysel, keď sa zdieľa.",
     communityBody:
       "Vo voľnom čase pôsobím v MakerSpace Bratislava — komunitnej dielni v Novej Cvernovke. Dobrovoľníčim pri jej fungovaní, pomáham ľuďom s elektronikou a maker projektmi, lektorujem, vediem praktické kurzy a pomáham pri Elektro krúžku pre deti. Pripravujem tiež kurz 3D modelovania pre tlač.",
+    communityCourseExpand: "Zobraziť detail",
+    communityCourseCollapse: "Skryť detail",
     communityCourseLabel: "MÔJ KURZ V MSBA",
     communityCourseTitle: "Základy elektroniky",
     communityCourseBody:

@@ -49,38 +49,46 @@ export function CommunitySection({ t }: CommunitySectionProps) {
           </div>
         </div>
 
-        <CommunityCourse
-          id="course-title"
-          label={t.communityCourseLabel}
-          title={t.communityCourseTitle}
-          body={t.communityCourseBody}
-          facts={t.communityCourseFacts}
-          audience={t.communityCourseAudience}
-          href="https://msba.sk/elektro-dielna/zaklady-elektroniky/"
-          cta={t.communityCourseCta}
-        />
+        <div className="community-courses-grid">
+          <CommunityCourse
+            id="course-title"
+            label={t.communityCourseLabel}
+            title={t.communityCourseTitle}
+            body={t.communityCourseBody}
+            facts={t.communityCourseFacts}
+            audience={t.communityCourseAudience}
+            href="https://msba.sk/elektro-dielna/zaklady-elektroniky/"
+            cta={t.communityCourseCta}
+            expandLabel={t.communityCourseExpand}
+            collapseLabel={t.communityCourseCollapse}
+          />
 
-        <CommunityCourse
-          id="electronics-club-title"
-          label={t.communityKidsLabel}
-          title={t.communityKidsTitle}
-          body={t.communityKidsBody}
-          facts={t.communityKidsFacts}
-          audience={t.communityKidsAudience}
-          href="https://msba.sk/elektro-dielna/elektro-kruzok/"
-          cta={t.communityKidsCta}
-        />
+          <CommunityCourse
+            id="electronics-club-title"
+            label={t.communityKidsLabel}
+            title={t.communityKidsTitle}
+            body={t.communityKidsBody}
+            facts={t.communityKidsFacts}
+            audience={t.communityKidsAudience}
+            href="https://msba.sk/elektro-dielna/elektro-kruzok/"
+            cta={t.communityKidsCta}
+            expandLabel={t.communityCourseExpand}
+            collapseLabel={t.communityCourseCollapse}
+          />
 
-        <CommunityCourse
-          id="modelling-course-title"
-          label={t.communityModellingLabel}
-          title={t.communityModellingTitle}
-          body={t.communityModellingBody}
-          facts={t.communityModellingFacts}
-          audience={t.communityModellingAudience}
-          status={t.communityModellingStatus}
-          upcoming
-        />
+          <CommunityCourse
+            id="modelling-course-title"
+            label={t.communityModellingLabel}
+            title={t.communityModellingTitle}
+            body={t.communityModellingBody}
+            facts={t.communityModellingFacts}
+            audience={t.communityModellingAudience}
+            status={t.communityModellingStatus}
+            expandLabel={t.communityCourseExpand}
+            collapseLabel={t.communityCourseCollapse}
+            upcoming
+          />
+        </div>
       </div>
     </section>
   );

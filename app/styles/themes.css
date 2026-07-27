@@ -25,6 +25,10 @@ html[data-theme="light"] .community-course-feature--upcoming {
     rgba(255, 255, 255, 0.56);
 }
 
+html[data-theme="light"] .community-course-detail {
+  background: rgba(230, 235, 234, 0.28);
+}
+
 html[data-theme="light"] .hero {
   background:
     linear-gradient(rgba(37, 60, 67, 0.035) 1px, transparent 1px),

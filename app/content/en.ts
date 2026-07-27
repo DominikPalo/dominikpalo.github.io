@@ -136,6 +136,8 @@ export const en = {
     communityTitle: "Technology matters when it is shared.",
     communityBody:
       "In my free time, I’m active at MakerSpace Bratislava — a community workshop at Nová Cvernovka. I volunteer to help run the space, support people with electronics and maker projects, teach, lead hands-on courses, and help with the children’s Electronics Club. I’m also preparing a course on 3D modelling for printing.",
+    communityCourseExpand: "View details",
+    communityCourseCollapse: "Hide details",
     communityCourseLabel: "MY COURSE AT MSBA",
     communityCourseTitle: "Electronics fundamentals",
     communityCourseBody:
