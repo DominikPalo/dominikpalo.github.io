@@ -32,6 +32,7 @@ export function ContactFooter({ t, messageSent }: ContactFooterProps) {
           >
             <input type="hidden" name="_subject" value="Nová správa z palo.sk" />
             <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
             <input
               type="hidden"
               name="_next"
