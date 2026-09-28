@@ -3,6 +3,10 @@
     display: none;
   }
 
+  .menu-toggle {
+    display: inline-flex;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr 390px;
     gap: 48px;
@@ -37,7 +41,8 @@
 
 @media (max-width: 860px) {
   .container,
-  .header-inner {
+  .header-inner,
+  .mobile-nav ol {
     width: min(100% - 40px, 720px);
   }
 
@@ -106,8 +111,13 @@
 
 @media (max-width: 560px) {
   .container,
-  .header-inner {
+  .header-inner,
+  .mobile-nav ol {
     width: min(100% - 28px, 520px);
+  }
+
+  .header-controls {
+    gap: 8px;
   }
 
   .header-inner {
