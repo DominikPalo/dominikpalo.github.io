@@ -1,7 +1,6 @@
 import type { Language } from "../types";
 
 export const SITE_URL = "https://palo.sk";
-export const DATE_MODIFIED = "2026-09-28";
 
 export const languagePaths: Record<Language, string> = {
   sk: "/",
@@ -73,7 +72,7 @@ const escapeAttr = (value: string) =>
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
 
-const structuredData = (language: Language) => {
+const structuredData = (language: Language, dateModified: string) => {
   const m = meta[language];
   const url = pageUrl(language);
 
@@ -95,7 +94,7 @@ const structuredData = (language: Language) => {
         url,
         name: m.profileName,
         description: m.profileDescription,
-        dateModified: DATE_MODIFIED,
+        dateModified,
         inLanguage: language,
         isPartOf: { "@id": `${SITE_URL}/#website` },
         mainEntity: { "@id": `${SITE_URL}/#person` },
@@ -164,12 +163,12 @@ const structuredData = (language: Language) => {
 };
 
 /** Language-specific <head> tags, injected at the `<!--app-head-->` placeholder. */
-export const renderHead = (language: Language) => {
+export const renderHead = (language: Language, dateModified: string) => {
   const m = meta[language];
   const other: Language = language === "sk" ? "en" : "sk";
   const url = pageUrl(language);
   const a = escapeAttr;
-  const json = JSON.stringify(structuredData(language), null, 2).replace(/</g, "\\u003c");
+  const json = JSON.stringify(structuredData(language, dateModified), null, 2).replace(/</g, "\\u003c");
 
   return `<title>${a(m.title)}</title>
     <meta name="description" content="${a(m.description)}" />
@@ -203,4 +202,31 @@ export const renderHead = (language: Language) => {
     <script type="application/ld+json">
 ${json}
     </script>`;
+};
+
+const LANGUAGES = Object.keys(languagePaths) as Language[];
+
+/** sitemap.xml listing every language version with its hreflang alternates. */
+export const renderSitemap = (lastModified: string) => {
+  const alternates = [
+    ...LANGUAGES.map(
+      (code) => `    <xhtml:link rel="alternate" hreflang="${code}" href="${pageUrl(code)}" />`,
+    ),
+    `    <xhtml:link rel="alternate" hreflang="x-default" href="${pageUrl("sk")}" />`,
+  ].join("\n");
+
+  const urls = LANGUAGES.map(
+    (code) => `  <url>
+    <loc>${pageUrl(code)}</loc>
+    <lastmod>${lastModified}</lastmod>
+${alternates}
+  </url>`,
+  ).join("\n");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+${urls}
+</urlset>
+`;
 };
