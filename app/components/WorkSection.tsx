@@ -34,7 +34,14 @@ export function WorkSection({ t, language }: WorkSectionProps) {
                 rel="noreferrer"
                 aria-label={project.title + " — " + t.projectVisit}
               >
-                <img src={project.image} alt="" />
+                <img
+                  src={project.image}
+                  width={project.imageWidth}
+                  height={project.imageHeight}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
                 <span className="project-scan" aria-hidden="true" />
                 <span className="project-open" aria-hidden="true">↗</span>
               </a>

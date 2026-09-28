@@ -29,7 +29,11 @@ export function HobbiesSection({ t }: HobbiesSectionProps) {
               <img
                 className="motorcycle-outline"
                 src="/motorcycle-outline-hairline.webp"
+                width={1692}
+                height={930}
                 alt=""
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <div className="hobby-content">
@@ -48,7 +52,15 @@ export function HobbiesSection({ t }: HobbiesSectionProps) {
               <span>{t.travelLabel}</span>
             </div>
             <div className="travel-visual" aria-hidden="true">
-              <img className="asia-map-outline" src="/asia-outline.png" alt="" />
+              <img
+                className="asia-map-outline"
+                src="/asia-outline.webp"
+                width={960}
+                height={919}
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
               <span className="map-connection" />
               <i className="map-pin map-pin-west" />
               <i className="map-pin map-pin-central" />

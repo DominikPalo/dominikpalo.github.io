@@ -44,7 +44,14 @@ export function HeroSection({ t, language }: HeroSectionProps) {
           </div>
           <div className="profile-visual">
             <div className="portrait-frame">
-              <img src="/dominik-palo-nerdy.png" alt={t.portraitAlt} />
+              <img
+                src="/dominik-palo-nerdy.webp"
+                width={800}
+                height={800}
+                alt={t.portraitAlt}
+                fetchPriority="high"
+                decoding="async"
+              />
             </div>
           </div>
           <div className="system-readouts">
