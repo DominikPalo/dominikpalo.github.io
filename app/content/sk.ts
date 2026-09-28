@@ -8,7 +8,7 @@ export const sk = {
       contact: "Kontakt",
     },
     skip: "Preskočiť na obsah",
-    languageLabel: "Zmeniť jazyk na angličtinu",
+    languageLabel: "Jazyk",
     themeSwitch: "Zmeniť farebný režim",
     themeSwitchToLight: "Prepnúť na svetlý režim",
     themeSwitchToDark: "Prepnúť na tmavý režim",

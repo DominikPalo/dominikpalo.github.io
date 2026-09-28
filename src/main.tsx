@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { hydrateRoot } from "react-dom/client";
 import "@fontsource-variable/space-grotesk/wght.css";
 import Home from "../app/page";
+import { languageFromPath } from "../app/content/meta";
 import "../app/globals.css";
 
 const root = document.getElementById("root");
@@ -13,7 +14,7 @@ if (!root) {
 
 const app = (
   <StrictMode>
-    <Home />
+    <Home initialLanguage={languageFromPath(window.location.pathname)} />
   </StrictMode>
 );
 

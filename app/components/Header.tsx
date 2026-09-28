@@ -1,4 +1,5 @@
 import type { PageCopy } from "../content/copy";
+import { languagePaths } from "../content/meta";
 import type { Language } from "../types";
 
 type HeaderProps = {
@@ -6,7 +7,6 @@ type HeaderProps = {
   language: Language;
   themeSwitchLabel: string;
   onBrandTap: () => void;
-  onLanguageChange: (language: Language) => void;
   onThemeToggle: () => void;
 };
 
@@ -15,7 +15,6 @@ export function Header({
   language,
   themeSwitchLabel,
   onBrandTap,
-  onLanguageChange,
   onThemeToggle,
 }: HeaderProps) {
   return (
@@ -49,24 +48,29 @@ export function Header({
         </nav>
 
         <div className="header-controls">
-          <div className="language-switch" aria-label={t.languageLabel}>
-            <button
-              type="button"
-              className={language === "sk" ? "active" : ""}
-              onClick={() => onLanguageChange("sk")}
-              aria-pressed={language === "sk"}
-            >
-              SK
-            </button>
-            <button
-              type="button"
-              className={language === "en" ? "active" : ""}
-              onClick={() => onLanguageChange("en")}
-              aria-pressed={language === "en"}
-            >
-              EN
-            </button>
-          </div>
+          <nav className="language-switch" aria-label={t.languageLabel}>
+            {(["sk", "en"] as const).map((code) => (
+              <a
+                key={code}
+                href={languagePaths[code]}
+                hrefLang={code}
+                lang={code}
+                className={language === code ? "active" : ""}
+                aria-current={language === code ? "page" : undefined}
+                onClick={(event) => {
+                  if (language === code) {
+                    event.preventDefault();
+                    return;
+                  }
+
+                  // Keep the reader's current section when switching languages.
+                  event.currentTarget.href = languagePaths[code] + window.location.hash;
+                }}
+              >
+                {code.toUpperCase()}
+              </a>
+            ))}
+          </nav>
 
           <button
             className="theme-switch"

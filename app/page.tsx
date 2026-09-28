@@ -41,8 +41,12 @@ const constrainMakerWindow = (
   ),
 });
 
-export default function Home() {
-  const [language, setLanguage] = useState<Language>("sk");
+type HomeProps = {
+  initialLanguage?: Language;
+};
+
+export default function Home({ initialLanguage = "sk" }: HomeProps) {
+  const language = initialLanguage;
   const [messageSent, setMessageSent] = useState(false);
   const [makerMode, setMakerMode] = useState(false);
   const [makerPosition, setMakerPosition] = useState<MakerWindowPosition | null>(null);
@@ -54,10 +58,6 @@ export default function Home() {
   const makerWindowRef = useRef<HTMLElement | null>(null);
   const makerWindowDrag = useRef<MakerWindowDrag | null>(null);
   const t = copy[language];
-
-  useEffect(() => {
-    document.documentElement.lang = language;
-  }, [language]);
 
   useEffect(() => {
     const currentTheme =
@@ -298,7 +298,6 @@ export default function Home() {
         language={language}
         themeSwitchLabel={themeSwitchLabel}
         onBrandTap={handleBrandTap}
-        onLanguageChange={setLanguage}
         onThemeToggle={handleThemeToggle}
       />
 
@@ -314,7 +313,7 @@ export default function Home() {
 
       <HobbiesSection t={t} />
 
-      <ContactFooter t={t} messageSent={messageSent} />
+      <ContactFooter t={t} language={language} messageSent={messageSent} />
 
       <MakerWindow
         t={t}

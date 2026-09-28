@@ -102,8 +102,10 @@
   gap: 10px;
 }
 
-.language-switch button {
+.language-switch a {
   min-width: 42px;
+  text-align: center;
+  text-decoration: none;
   border: 0;
   background: transparent;
   color: var(--muted);
@@ -112,7 +114,7 @@
   font: 700 0.7rem var(--font-mono);
 }
 
-.language-switch button.active {
+.language-switch a.active {
   background: var(--navy-700);
   color: var(--white);
 }

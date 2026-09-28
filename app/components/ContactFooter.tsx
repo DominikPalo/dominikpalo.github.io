@@ -1,11 +1,14 @@
 import type { PageCopy } from "../content/copy";
+import { pageUrl } from "../content/meta";
+import type { Language } from "../types";
 
 type ContactFooterProps = {
   t: PageCopy;
+  language: Language;
   messageSent: boolean;
 };
 
-export function ContactFooter({ t, messageSent }: ContactFooterProps) {
+export function ContactFooter({ t, language, messageSent }: ContactFooterProps) {
   return (
     <footer className="site-footer" id="contact">
       <div className="container">
@@ -36,9 +39,9 @@ export function ContactFooter({ t, messageSent }: ContactFooterProps) {
             <input
               type="hidden"
               name="_next"
-              value="https://palo.sk/?message=sent#contact"
+              value={`${pageUrl(language)}?message=sent#contact`}
             />
-            <input type="hidden" name="_url" value="https://palo.sk/#contact" />
+            <input type="hidden" name="_url" value={`${pageUrl(language)}#contact`} />
 
             <div className="contact-form-trap" aria-hidden="true">
               <label htmlFor="contact-company">Company website</label>

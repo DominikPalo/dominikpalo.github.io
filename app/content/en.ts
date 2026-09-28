@@ -8,7 +8,7 @@ export const en = {
       contact: "Contact",
     },
     skip: "Skip to content",
-    languageLabel: "Switch language to Slovak",
+    languageLabel: "Language",
     themeSwitch: "Change color mode",
     themeSwitchToLight: "Switch to light mode",
     themeSwitchToDark: "Switch to dark mode",
