@@ -1,6 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { hydrateRoot } from "react-dom/client";
+import "@fontsource-variable/inter/wght.css";
 import "@fontsource-variable/space-grotesk/wght.css";
 import Home from "../app/page";
 import { languageFromPath } from "../app/content/meta";
