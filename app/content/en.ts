@@ -70,6 +70,19 @@ export const en = {
       },
       {
         index: "02",
+        title: "SparkVille",
+        type: "SIDE PROJECT / BETA",
+        description:
+          "An interactive web platform that teaches electronics through short lessons, experiments, and mini-games. Together with Sparkie, a friendly electric spark, players explore a town map by map, wire circuits, read resistor bands, and measure in a virtual workshop with a breadboard, multimeter, and oscilloscope. No account needed, in 10 languages.",
+        tags: ["TypeScript", "React", "Vite", "Cloudflare"],
+        href: "https://sparkville.app/en/",
+        image: "/projects/sparkville.webp",
+        imageWidth: 1200,
+        imageHeight: 630,
+        featured: true,
+      },
+      {
+        index: "03",
         title: "Slido for Google Slides",
         type: "WEB ECOSYSTEM",
         description:
@@ -81,7 +94,7 @@ export const en = {
         imageHeight: 600,
       },
       {
-        index: "03",
+        index: "04",
         title: "Slido Switcher",
         type: "NATIVE DESKTOP / 2017—2025",
         description:
@@ -93,7 +106,7 @@ export const en = {
         imageHeight: 697,
       },
       {
-        index: "04",
+        index: "05",
         title: "Slido for Slack",
         type: "PRODUCT INTEGRATION / 2018—2020",
         description:
@@ -105,7 +118,7 @@ export const en = {
         imageHeight: 706,
       },
       {
-        index: "05",
+        index: "06",
         title: "Arduino Smart Home",
         type: "DEAN'S AWARD / 2013",
         description:

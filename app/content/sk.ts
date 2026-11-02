@@ -70,6 +70,19 @@ export const sk = {
       },
       {
         index: "02",
+        title: "SparkVille",
+        type: "SIDE PROJECT / BETA",
+        description:
+          "Interaktívna webová platforma, ktorá učí elektroniku cez krátke lekcie, pokusy a minihry. Spolu so Sparkiem, priateľskou elektrickou iskričkou, hráči mapu za mapou objavujú mestečko, zapájajú obvody, čítajú prúžky rezistorov a merajú vo virtuálnej dielni s nepájivým poľom, multimetrom a osciloskopom. Bez účtu a v 10 jazykoch.",
+        tags: ["TypeScript", "React", "Vite", "Cloudflare"],
+        href: "https://sparkville.app/sk/",
+        image: "/projects/sparkville.webp",
+        imageWidth: 1200,
+        imageHeight: 630,
+        featured: true,
+      },
+      {
+        index: "03",
         title: "Slido for Google Slides",
         type: "WEB ECOSYSTEM",
         description:
@@ -81,7 +94,7 @@ export const sk = {
         imageHeight: 600,
       },
       {
-        index: "03",
+        index: "04",
         title: "Slido Switcher",
         type: "NATIVE DESKTOP / 2017—2025",
         description:
@@ -93,7 +106,7 @@ export const sk = {
         imageHeight: 697,
       },
       {
-        index: "04",
+        index: "05",
         title: "Slido for Slack",
         type: "PRODUCT INTEGRATION / 2018—2020",
         description:
@@ -105,7 +118,7 @@ export const sk = {
         imageHeight: 706,
       },
       {
-        index: "05",
+        index: "06",
         title: "Arduino Smart Home",
         type: "DEAN'S AWARD / 2013",
         description:
